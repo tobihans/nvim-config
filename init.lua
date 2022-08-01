@@ -37,6 +37,12 @@ local config = {
   options = {
     opt = {
       relativenumber = false, -- sets vim.opt.relativenumber
+      mouse = '',
+      tabstop = 2,
+      softtabstop=2,
+      shiftwidth=2,
+      expandtab = true,
+
     },
     g = {
       mapleader = ",", -- sets vim.g.mapleader
@@ -93,6 +99,16 @@ local config = {
       --     require("lsp_signature").setup()
       --   end,
       -- },
+      { 'mg979/vim-visual-multi' },
+      { 'junegunn/goyo.vim' },
+      {
+        'weilbith/nvim-code-action-menu',
+        cmd = 'CodeActionMenu',
+      },
+      {
+        'kosayoda/nvim-lightbulb',
+        requires = 'antoinemadec/FixCursorHold.nvim',
+      }
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -251,6 +267,9 @@ local config = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+
+    -- Load config from vimfile
+    vim.cmd('source ~/.config/nvim/lua/user/vim/init.vim');
   end,
 }
 
