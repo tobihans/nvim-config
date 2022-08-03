@@ -15,7 +15,7 @@ local header = {
       '   ⠀⠀⠻⣿⣿⡇⠀⠈⠓⢦⣤⣤⣤⡤⠞⠉⠀⠀⠀⠀⠈⠛⠒⠚⢩⡅⣠⡴⠋⠀⠀⠀⠀  ',
       '   ⠀⠀⠀⠈⠻⢧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣻⠿⠋⠀⠀⠀⠀⠀⠀  ',
       '   ⠀⠀⠀⠀⠀⠀⠉⠓⠶⣤⣄⣀⡀⠀⠀⠀⠀⠀⢀⣀⣠⡴⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀  ',
-       };
+};
 
 local config = {
   header = header,
@@ -41,14 +41,7 @@ local config = {
   colorscheme = "tokyonight",
 
   -- Override highlight groups in any theme
-  highlights = {
-    default_theme = function(highlights) -- or a function that returns one
-      local C = require "default_theme.colors"
-
-      highlights.Normal = { fg = C.fg, bg = C.bg }
-      return highlights
-    end,
-  },
+  highlights = {},
 
   -- set vim options here (vim.<first_key>.<second_key> =  value)
   options = {
@@ -59,11 +52,11 @@ local config = {
       softtabstop=2,
       shiftwidth=2,
       expandtab = true,
-
     },
     g = {
       mapleader = ",",
       tokyonight_style = 'night',
+      user_emmet_leader_key='<space>',
     },
   },
 
@@ -110,14 +103,9 @@ local config = {
       { 'folke/tokyonight.nvim' },
       { 'rmolin88/pomodoro.vim' },
       { 'mg979/vim-visual-multi' },
-      {
-        'weilbith/nvim-code-action-menu',
-        cmd = 'CodeActionMenu',
-      },
-      {
-        'kosayoda/nvim-lightbulb',
-        requires = 'antoinemadec/FixCursorHold.nvim',
-      }
+      { 'mattn/emmet-vim' },
+      { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
+      { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
     },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
@@ -148,7 +136,7 @@ local config = {
       ensure_installed = { "lua" },
     },
     ["nvim-lsp-installer"] = {
-      ensure_installed = { "sumneko_lua" },
+      ensure_installed = { "sumneko_lua", "rust_analyzer", "clangd", "intelephense", "tailwindcss" },
     },
     packer = {
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
@@ -198,39 +186,13 @@ local config = {
   -- Extend LSP configuration
   lsp = {
     -- enable servers that you already have installed without lsp-installer
-    servers = {
-      -- "pyright"
-    },
+    servers = {},
     -- easily add or disable built in mappings added during LSP attaching
     mappings = {
-      n = {
-        -- ["<leader>lf"] = false -- disable formatting keymap
-      },
+      n = {},
     },
-    -- add to the server on_attach function
-    -- on_attach = function(client, bufnr)
-    -- end,
-
-    -- override the lsp installer server-registration function
-    -- server_registration = function(server, opts)
-    --   require("lspconfig")[server].setup(opts)
-    -- end,
-
     -- Add overrides for LSP server settings, the keys are the name of the server
-    ["server-settings"] = {
-      -- example for addings schemas to yamlls
-      -- yamlls = {
-      --   settings = {
-      --     yaml = {
-      --       schemas = {
-      --         ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*.{yml,yaml}",
-      --         ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
-      --         ["http://json.schemastore.org/ansible-stable-2.9"] = "roles/tasks/*.{yml,yaml}",
-      --       },
-      --     },
-      --   },
-      -- },
-    },
+    ["server-settings"] = {},
   },
 
   -- Diagnostics configuration (for vim.diagnostics.config({}))
@@ -241,14 +203,8 @@ local config = {
 
   mappings = {
     -- first key is the mode
-    n = {
-      -- second key is the lefthand side of the map
-      -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
-    },
-    t = {
-      -- setting a mapping to false will disable it
-      -- ["<esc>"] = false,
-    },
+    n = {},
+    t = {},
   },
 
   -- This function is run last
@@ -263,20 +219,6 @@ local config = {
       pattern = "plugins.lua",
       command = "source <afile> | PackerSync",
     })
-
-    -- Set up custom filetypes
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
-
     -- Load config from vimfile
     vim.cmd('source ~/.config/nvim/lua/user/vim/init.vim');
   end,
