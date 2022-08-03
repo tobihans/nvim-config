@@ -38,13 +38,10 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "default_theme",
+  colorscheme = "tokyonight",
 
   -- Override highlight groups in any theme
   highlights = {
-    -- duskfox = { -- a table of overrides
-    --   Normal = { bg = "#000000" },
-    -- },
     default_theme = function(highlights) -- or a function that returns one
       local C = require "default_theme.colors"
 
@@ -65,7 +62,8 @@ local config = {
 
     },
     g = {
-      mapleader = ",", -- sets vim.g.mapleader
+      mapleader = ",",
+      tokyonight_style = 'night',
     },
   },
 
@@ -108,9 +106,10 @@ local config = {
     -- Add plugins, the packer syntax without the "use"
     init = {
       -- { 'delphinus/artify.nvim' },
+      { 'Pocco81/true-zen.nvim' },
+      { 'folke/tokyonight.nvim' },
       { 'rmolin88/pomodoro.vim' },
       { 'mg979/vim-visual-multi' },
-      { 'junegunn/goyo.vim' },
       {
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',
