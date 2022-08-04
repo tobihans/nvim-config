@@ -7,11 +7,5 @@ return {
   { 'mattn/emmet-vim' },
   { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
-  {
-    "kkoomen/vim-doge",
-    run = ":call doge#install()",
-    cmd = { "DogeGenerate", "DogeCreateDocStandard" },
-    disable = false,
-  }
 }
 

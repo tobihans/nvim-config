@@ -14,20 +14,6 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
-" Vim Doge
-let g:doge_enable_mappings=1
-let g:doge_doc_standard_lua="ldoc"
-let g:doge_doc_standard_python="google"
-let g:doge_doc_standard_javascript="jsdoc"
-let g:doge_doc_standard_typescript="jsdoc"
-let g:doge_doc_standard_rs="rustdoc"
-let g:doge_mapping_comment_jump_forward="<M-j>"
-let g:doge_mapping_comment_jump_backward="<M-k>"
-let g:doge_buffer_mappings=1
-let g:doge_comment_jump_modes=[ "n", "i", "s" ]
-let g:doge_mapping =""
-
-
 " Mappings
 nnoremap <S-t> :tabnew<CR>
 
@@ -42,9 +28,6 @@ nnoremap <leader>7 :tabN 7
 nnoremap <leader>8 :tabN 8
 nnoremap <leader>9 :tabN 9
 nnoremap <leader>0 :tablast<cr>
-
-" Code helpers
-nnoremap <space>cc :DogeGenerate<cr>
 
 " Events
 augroup mygroup
