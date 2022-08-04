@@ -56,7 +56,7 @@ local config = {
     g = {
       mapleader = ",",
       tokyonight_style = 'night',
-      user_emmet_leader_key='<space>',
+      user_emmet_leader_key='<C-X>',
     },
   },
 
@@ -96,17 +96,6 @@ local config = {
 
   -- Configure plugins
   plugins = {
-    -- Add plugins, the packer syntax without the "use"
-    init = {
-      -- { 'delphinus/artify.nvim' },
-      { 'Pocco81/true-zen.nvim' },
-      { 'folke/tokyonight.nvim' },
-      { 'rmolin88/pomodoro.vim' },
-      { 'mg979/vim-visual-multi' },
-      { 'mattn/emmet-vim' },
-      { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
-      { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
-    },
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
       local null_ls = require "null-ls"
@@ -150,21 +139,6 @@ local config = {
     -- Extend filetypes
     filetype_extend = {
       javascript = { "javascriptreact" },
-    },
-  },
-
-  -- Modify which-key registration
-  ["which-key"] = {
-    -- Add bindings
-    register_mappings = {
-      -- first key is the mode, n == normal mode
-      n = {
-        -- second key is the prefix, <leader> prefixes
-        ["<leader>"] = {
-          -- which-key registration table for normal mode, leader prefix
-          -- ["N"] = { "<cmd>tabnew<cr>", "New Buffer" },
-        },
-      },
     },
   },
 
