@@ -70,8 +70,8 @@ command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 set so=7
 
 " Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
+" let $LANG='en' 
+" set langmenu=en
 
 " Turn on the Wild menu
 set wildmenu
@@ -215,17 +215,17 @@ map <C-space> ?
 nnoremap <silent> <leader><cr> :noh<cr>
 
 " Close all the buffers
-map <leader>a :bufdo bd<cr>
+" map <leader>a :bufdo bd<cr>
 
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+" map <leader>l :bnext<cr>
+" map <leader>h :bprevious<cr>
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
+" map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+" map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
