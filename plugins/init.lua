@@ -7,5 +7,6 @@ return {
   { 'mattn/emmet-vim' },
   { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
+  { 'tpope/vim-fugitive' },
 }
 
