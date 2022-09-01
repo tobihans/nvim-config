@@ -1,11 +1,17 @@
 return {
-  -- { 'delphinus/artify.nvim' },
+  { 'mattn/emmet-vim' },
+  { 'sainnhe/everforest' },
   { 'Pocco81/true-zen.nvim' },
   { 'folke/tokyonight.nvim' },
-  { 'rmolin88/pomodoro.vim' },
   { 'mg979/vim-visual-multi' },
-  { 'mattn/emmet-vim' },
+  { 'KeitaNakamura/neodark.vim' },
   { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
+  { 'anuvyklack/fold-preview.nvim',
+   requires = 'anuvyklack/keymap-amend.nvim',
+   config = function()
+      require('fold-preview').setup()
+   end
+  }
 }
 

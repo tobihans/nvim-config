@@ -131,9 +131,12 @@ if has("gui_macvim")
     autocmd GUIEnter * set vb t_vb=
 endif
 
+" Get all folds opened on open
+" autocmd BufReadPost,FileReadPost * normal zR
+autocmd Syntax c,cpp set foldmethod=syntax
+autocmd Syntax python set foldmethod=syntax
+autocmd Syntax * normal zR
 
-" Add a bit extra margin to the left
-set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,6 +258,9 @@ if has("mac") || has("macunix")
   vmap <D-j> <M-j>
   vmap <D-k> <M-k>
 endif
+
+" Shirtcuts to edit config files
+nnoremap <M-s> :edit ~/.config/.nvim/lua/user/init.lua<cr>
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
