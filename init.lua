@@ -59,6 +59,7 @@ local config = {
       foldlevelstart = 50,
       foldnestmax = 3,
       foldminlines = 1,
+      -- foldcolumn = "1",
     },
     g = {
       mapleader = ",",
@@ -110,13 +111,17 @@ local config = {
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
-        -- Set a formatter
-        null_ls.builtins.formatting.rufo,
-        -- Set a linter
-        null_ls.builtins.diagnostics.rubocop,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.rustfmt,
+        null_ls.builtins.formatting.phpcsfixer,
+        null_ls.builtins.formatting.prettier,
+        null_ls.builtins.formatting.stylua,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
+      if client.name == "tsserver" or client.name == "rust_analyzer" or client.name == "pyright" then
+        client.resolved_capabilities.document_formatting = false
+      end
         -- NOTE: You can remove this on attach function to disable format on save
         if client.resolved_capabilities.document_formatting then
           vim.api.nvim_create_autocmd("BufWritePre", {
@@ -129,10 +134,64 @@ local config = {
       return config -- return final config table
     end,
     treesitter = {
-      ensure_installed = { "lua" },
+      -- TODO: complete the list of things o be installed
+      ensure_installed = {
+        "bash",
+        "c",
+        "cpp",
+        "css",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "php",
+        "python",
+        "regex",
+        "ruby",
+        "rust",
+        "scss",
+        "sql",
+        "toml",
+        "typescript",
+        "vim",
+        "yaml",
+      },
+      highlight = { enable = true },
+      indent = { enable = true },
+      autotag = {
+        enable = true,
+        filetypes = {
+          "html",
+          "javascript",
+          "javascriptreact",
+          "svelte",
+          "typescript",
+          "typescriptreact",
+          "vue",
+          "xml",
+        },
+      },
     },
     ["nvim-lsp-installer"] = {
-      ensure_installed = { "sumneko_lua", "rust_analyzer", "clangd", "intelephense", "tailwindcss" },
+      ensure_installed = {
+        "sumneko_lua",
+        "rust_analyzer",
+        "clangd",
+        "intelephense",
+        "tailwindcss",
+        "yaml-language-server",
+        "vue-language-server",
+        "typescript-language-server",
+        "pyright",
+        "marksman",
+        "nimlsp",
+        "mypy",
+        "eslint-lsp",
+        "css-lsp",
+        "sqll",
+      },
     },
     packer = {
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",
@@ -145,7 +204,7 @@ local config = {
     vscode_snippet_paths = {},
     -- Extend filetypes
     filetype_extend = {
-      javascript = { "javascriptreact" },
+      javascript = { "javascriptreact", "vue", },
     },
   },
 

@@ -133,8 +133,9 @@ endif
 
 " Get all folds opened on open
 " autocmd BufReadPost,FileReadPost * normal zR
-autocmd Syntax c,cpp set foldmethod=syntax
-autocmd Syntax python set foldmethod=syntax
+" autocmd Syntax c,cpp set foldmethod=syntax
+" autocmd Syntax python set foldmethod=syntax
+" autocmd Syntax python,yaml setl foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
 autocmd Syntax * normal zR
 
 
