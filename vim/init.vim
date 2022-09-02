@@ -261,7 +261,7 @@ if has("mac") || has("macunix")
 endif
 
 " Shirtcuts to edit config files
-nnoremap <M-s> :edit ~/.config/.nvim/lua/user/init.lua<cr>
+nnoremap <M-s> :edit ~/.config/nvim/lua/user/init.lua<cr>
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
