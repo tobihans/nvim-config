@@ -106,16 +106,18 @@ local config = {
   plugins = {
     -- All other entries override the setup() call for default plugins
     ["null-ls"] = function(config)
-      -- local null_ls = require "null-ls"
+      local null_ls = require "null-ls"
       -- Check supported formatters and linters
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
         -- null_ls.builtins.formatting.black,
         -- null_ls.builtins.formatting.rustfmt,
-        -- null_ls.builtins.formatting.phpcsfixer,
         -- null_ls.builtins.formatting.prettier,
-        -- null_ls.builtins.formatting.stylua,
+        -- null_ls.builtins.formatting.phpcsfixer,
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.diagnostics.todo_comments,
+        -- null_ls.builtins.diagnostics.mypy,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
