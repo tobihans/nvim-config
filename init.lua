@@ -63,7 +63,7 @@ local config = {
     },
     g = {
       mapleader = ",",
-      tokyonight_style = "night",
+      tokyonight_style = "storm",
       user_emmet_leader_key = "<C-X>",
     },
   },
@@ -111,18 +111,14 @@ local config = {
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
-        -- null_ls.builtins.formatting.black,
-        -- null_ls.builtins.formatting.rustfmt,
-        -- null_ls.builtins.formatting.prettier,
-        -- null_ls.builtins.formatting.phpcsfixer,
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.todo_comments,
         -- null_ls.builtins.diagnostics.mypy,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
         if client.name == "tsserver" or client.name == "rust_analyzer" or client.name == "pyright" then
           client.resolved_capabilities.document_formatting = false
+          return
         end
         -- NOTE: You can remove this on attach function to disable format on save
         if client.resolved_capabilities.document_formatting then
@@ -136,7 +132,6 @@ local config = {
       return config -- return final config table
     end,
     treesitter = {
-      -- TODO: complete the list of things o be installed
       ensure_installed = {
         "bash",
         "c",
