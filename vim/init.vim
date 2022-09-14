@@ -108,7 +108,7 @@ endif
 " autocmd Syntax python set foldmethod=syntax
 " autocmd Syntax python,yaml setl foldtext=substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))
 autocmd Syntax * normal zR
-
+autocmd FileType c setl et " To abide by ALX Betty rules
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
