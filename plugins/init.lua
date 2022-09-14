@@ -1,17 +1,29 @@
 return {
-  { 'mattn/emmet-vim' },
-  -- { 'sainnhe/everforest' },
-  -- { 'Pocco81/true-zen.nvim' },
-  { 'folke/tokyonight.nvim' },
-  { 'mg979/vim-visual-multi' },
-  -- { 'KeitaNakamura/neodark.vim' },
+  -- Utilities
+  { "mattn/emmet-vim" },
+  { "mg979/vim-visual-multi" },
   -- { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   -- { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
-  { 'anuvyklack/fold-preview.nvim',
-   requires = 'anuvyklack/keymap-amend.nvim',
-   config = function()
-      require('fold-preview').setup()
-   end
-  }
-}
+  -- { 'Pocco81/true-zen.nvim' },
 
+  -- Themes
+  -- { 'sainnhe/everforest' },
+  -- { "shaunsingh/solarized.nvim" },
+  -- { 'sainnhe/edge' },
+  -- { "folke/tokyonight.nvim" },
+  { "EdenEast/nightfox.nvim", run = ":NightfoxCompile" },
+  -- { "navarasu/onedark.nvim" },
+  -- {
+  --   "rose-pine/neovim",
+  --   as = "rose-pine",
+  --   tag = "v1.*",
+  -- },
+  -- { 'whatyouhide/vim-gotham' },
+  -- { "arcticicestudio/nord-vim" },
+  -- { 'KeitaNakamura/neodark.vim' },
+  {
+    "anuvyklack/fold-preview.nvim",
+    requires = "anuvyklack/keymap-amend.nvim",
+    config = function() require("fold-preview").setup() end,
+  },
+}

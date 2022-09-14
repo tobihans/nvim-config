@@ -23,7 +23,7 @@ local config = {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "nightly", -- "stable" or "nightly"
+    channel = "stable", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -38,7 +38,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "tokyonight",
+  colorscheme = "terafox",
 
   -- Override highlight groups in any theme
   highlights = {},
@@ -47,7 +47,7 @@ local config = {
   options = {
     opt = {
       relativenumber = true,
-      mouse = "",
+      mouse = "n",
       tabstop = 2,
       softtabstop = 2,
       shiftwidth = 2,
@@ -56,15 +56,12 @@ local config = {
       foldexpr = "nvim_treesitter#foldexpr()",
       foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))]],
       fillchars = "fold: ",
-      foldlevelstart = 50,
-      foldnestmax = 3,
+      foldlevelstart = 20,
+      foldnestmax = 5,
       foldminlines = 1,
-      -- foldcolumn = "1",
     },
     g = {
       mapleader = ",",
-      tokyonight_style = "storm",
-      user_emmet_leader_key = "<C-X>",
     },
   },
 
@@ -112,7 +109,6 @@ local config = {
       -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
       config.sources = {
         null_ls.builtins.formatting.stylua,
-        -- null_ls.builtins.diagnostics.mypy,
       }
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
