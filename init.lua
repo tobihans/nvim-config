@@ -17,6 +17,8 @@ local header = {
   "   ⠀⠀⠀⠀⠀⠀⠉⠓⠶⣤⣄⣀⡀⠀⠀⠀⠀⠀⢀⣀⣠⡴⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀  ",
 }
 
+local preferred_colorschemes = { "carbonfox" }
+
 local config = {
   header = header,
 
@@ -38,7 +40,7 @@ local config = {
   },
 
   -- Set colorscheme
-  colorscheme = "terafox",
+  colorscheme = preferred_colorschemes[math.random(#preferred_colorschemes)],
 
   -- Override highlight groups in any theme
   highlights = {},
@@ -47,7 +49,7 @@ local config = {
   options = {
     opt = {
       relativenumber = true,
-      mouse = "n",
+      mouse = "",
       tabstop = 2,
       softtabstop = 2,
       shiftwidth = 2,

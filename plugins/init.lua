@@ -5,7 +5,11 @@ return {
   -- { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
   -- { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
   -- { 'Pocco81/true-zen.nvim' },
-
+  {
+    "anuvyklack/fold-preview.nvim",
+    requires = "anuvyklack/keymap-amend.nvim",
+    config = function() require("fold-preview").setup() end,
+  },
   -- Themes
   -- { 'sainnhe/everforest' },
   -- { "shaunsingh/solarized.nvim" },
@@ -21,9 +25,4 @@ return {
   -- { 'whatyouhide/vim-gotham' },
   -- { "arcticicestudio/nord-vim" },
   -- { 'KeitaNakamura/neodark.vim' },
-  {
-    "anuvyklack/fold-preview.nvim",
-    requires = "anuvyklack/keymap-amend.nvim",
-    config = function() require("fold-preview").setup() end,
-  },
 }
