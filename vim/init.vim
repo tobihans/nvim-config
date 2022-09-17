@@ -188,6 +188,8 @@ map <C-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 nnoremap <silent> <leader><cr> :noh<cr>
+nnoremap <silent> <leader>x :x<cr>
+nnoremap <silent> pwd :cd %:p:h
 
 " Close all the buffers
 " map <leader>a :bufdo bd<cr>
