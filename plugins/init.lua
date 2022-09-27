@@ -2,14 +2,14 @@ return {
   -- Utilities
   { "mattn/emmet-vim" },
   { "mg979/vim-visual-multi" },
-  -- { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
-  -- { 'kosayoda/nvim-lightbulb', requires = 'antoinemadec/FixCursorHold.nvim' },
-  -- { 'Pocco81/true-zen.nvim' },
+  { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
+  { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
   {
     "anuvyklack/fold-preview.nvim",
     requires = "anuvyklack/keymap-amend.nvim",
     config = function() require("fold-preview").setup() end,
   },
+  -- { 'Pocco81/true-zen.nvim' },
   -- Themes
   -- { 'sainnhe/everforest' },
   -- { "shaunsingh/solarized.nvim" },
