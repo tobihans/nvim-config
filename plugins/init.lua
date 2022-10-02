@@ -4,18 +4,37 @@ return {
   { "mg979/vim-visual-multi" },
   { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
   { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
+  { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup {} end },
   {
     "anuvyklack/fold-preview.nvim",
     requires = "anuvyklack/keymap-amend.nvim",
     config = function() require("fold-preview").setup() end,
   },
-  -- { 'Pocco81/true-zen.nvim' },
+  {
+    "kkoomen/vim-doge",
+    run = ":call doge#install()",
+  },
+  -- { "Pocco81/true-zen.nvim" },
   -- Themes
-  -- { 'sainnhe/everforest' },
+  { "sainnhe/sonokai" },
+  -- {
+  --   "catppuccin/nvim",
+  --   as = "catppuccin",
+  --   config = function()
+  --     require("catppuccin").setup {
+  --       dim_inactive = {
+  --         enabled = false,
+  --         shade = "dark",
+  --         percentage = 0.15,
+  --       },
+  --     }
+  --   end,
+  -- },
+  -- { "EdenEast/nightfox.nvim", run = ":NightfoxCompile" },
   -- { "shaunsingh/solarized.nvim" },
+  -- { 'sainnhe/everforest' },
   -- { 'sainnhe/edge' },
   -- { "folke/tokyonight.nvim" },
-  { "EdenEast/nightfox.nvim", run = ":NightfoxCompile" },
   -- { "navarasu/onedark.nvim" },
   -- {
   --   "rose-pine/neovim",
