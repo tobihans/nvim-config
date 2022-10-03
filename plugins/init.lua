@@ -4,16 +4,27 @@ return {
   { "mg979/vim-visual-multi" },
   { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
   { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
-  { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup {} end },
+  {
+    "kkoomen/vim-doge",
+    run = ":call doge#install()",
+  },
   {
     "anuvyklack/fold-preview.nvim",
     requires = "anuvyklack/keymap-amend.nvim",
     config = function() require("fold-preview").setup() end,
   },
   {
-    "kkoomen/vim-doge",
-    run = ":call doge#install()",
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function() require("todo-comments").setup() end,
   },
+  -- {
+  --   "phaazon/mind.nvim",
+  --   branch = "v2.2",
+  --   requires = { "nvim-lua/plenary.nvim" },
+  --   config = function() require("mind").setup() end,
+  -- },
+  -- { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end },
   -- { "Pocco81/true-zen.nvim" },
   -- Themes
   { "sainnhe/sonokai" },
