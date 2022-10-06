@@ -2,6 +2,7 @@ return {
   -- Utilities
   { "mattn/emmet-vim" },
   { "mg979/vim-visual-multi" },
+  { "kylechui/nvim-surround" },
   { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
   { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
   {

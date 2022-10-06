@@ -1,12 +1,15 @@
 local header = {
   "",
   "",
+  "",
+  "",
   " ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
   " ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
   " ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
   " ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
   " ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
   " ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
+  "",
   "",
   "",
 }
@@ -20,7 +23,7 @@ local config = {
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
+    channel = "nightly", -- "stable" or "nightly"
     version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
     branch = "main", -- branch name (NIGHTLY ONLY)
     commit = nil, -- commit hash (NIGHTLY ONLY)
@@ -107,15 +110,15 @@ local config = {
       -- set up null-ls's on_attach function
       config.on_attach = function(client)
         if client.name == "tsserver" or client.name == "rust_analyzer" or client.name == "pyright" then
-          client.resolved_capabilities.document_formatting = false
+          client.server_capabilities.documentFormattingProvider = false
           return
         end
         -- NOTE: You can remove this on attach function to disable format on save
-        if client.resolved_capabilities.document_formatting then
+        if client.server_capabilities.documentFormattingProvider then
           vim.api.nvim_create_autocmd("BufWritePre", {
             desc = "Auto format before save",
             pattern = "<buffer>",
-            callback = vim.lsp.buf.formatting_sync,
+            callback = vim.lsp.buf.format,
           })
         end
       end
