@@ -1,11 +1,4 @@
 return {
-  -- Core
-  ["WhoIsSethDaniel/mason-tool-installer.nvim"] = {
-    after = "mason.nvim",
-    config = function()
-      require("mason-tool-installer").setup({})
-    end,
-  },
   -- Utilities
   { "mattn/emmet-vim" },
   { "mg979/vim-visual-multi" },
@@ -45,6 +38,7 @@ return {
   --   requires = { "nvim-lua/plenary.nvim" },
   --   config = function() require("mind").setup() end,
   -- },
+  --
   -- { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end },
   -- { "Pocco81/true-zen.nvim" },
   -- Themes
