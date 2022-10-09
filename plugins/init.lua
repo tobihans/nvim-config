@@ -1,4 +1,11 @@
 return {
+  -- Core
+  ["WhoIsSethDaniel/mason-tool-installer.nvim"] = {
+    after = "mason.nvim",
+    config = function()
+      require("mason-tool-installer").setup({})
+    end,
+  },
   -- Utilities
   { "mattn/emmet-vim" },
   { "mg979/vim-visual-multi" },
@@ -19,6 +26,19 @@ return {
     requires = "nvim-lua/plenary.nvim",
     config = function() require("todo-comments").setup() end,
   },
+  -- disable due to conflicts with which key
+  -- {
+  --   "folke/noice.nvim",
+  --   event = "VimEnter",
+  --   config = function()
+  --     require("noice").setup()
+  --   end,
+  --   requires = {
+  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+  --     "MunifTanjim/nui.nvim",
+  --     "rcarriga/nvim-notify",
+  --   }
+  -- },
   -- {
   --   "phaazon/mind.nvim",
   --   branch = "v2.2",

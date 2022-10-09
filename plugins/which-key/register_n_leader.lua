@@ -1,4 +1,1 @@
-return {
-  ["<space>"] = {
-  }
-}
+return {}
