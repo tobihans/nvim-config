@@ -71,7 +71,7 @@ if has("mac") || has("macunix")
 endif
 
 " Edit my config
-nnoremap <M-s> :edit ~/.config/nvim/lua/user/init.lua
+nnoremap <M-s> :edit ~/.config/nvim/lua/user/init.lua<cr>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 

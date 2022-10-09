@@ -62,12 +62,6 @@ local config = {
     },
   },
 
-  -- Disable AstroNvim ui features
-  ui = {
-    nui_input = true,
-    telescope_select = true,
-  },
-
   -- Configure plugins
   plugins = {}, -- splitted across multiple files
 
