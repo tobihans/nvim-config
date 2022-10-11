@@ -6,7 +6,7 @@ return {
     hid = true, -- hide abandoned buffers
     ruler = true,
     cmdheight = 1,
-    mouse = "",
+    mouse = "nv",
     history = 500,
     updatetime = 250,
     writebackup = false,
