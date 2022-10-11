@@ -53,6 +53,6 @@ return {
     sonokai_style = sonokai_variants[math.random(#sonokai_variants)],
     sonokai_better_performance = 1,
     sonokai_enable_italic = 1,
-    db_ui_winwidth = 30,
+    db_ui_winwidth = 28,
   },
 }
