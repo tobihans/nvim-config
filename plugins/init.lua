@@ -27,6 +27,7 @@ return {
     -- TODO: Move to autocmd for sql buffers or override cmp setup for filetype
     config = function() astronvim.add_user_cmp_source "vim-dadbod-completion" end,
   },
+  { "tiagovla/scope.nvim", before = "bufferline", config = function() require("scope").setup() end },
   -- disable due to conflicts with which key
   -- {
   --   "folke/noice.nvim",
