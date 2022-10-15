@@ -79,6 +79,7 @@ local config = {
   cmp = {
     source_priority = {
       nvim_lsp = 1000,
+      ["vim-dadbod-completion"] = 800,
       luasnip = 750,
       buffer = 500,
       path = 250,
