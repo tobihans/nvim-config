@@ -1,4 +1,5 @@
-local sonokai_variants = { "shusia", "maia", "espresso", "andromeda", "atlantis", "default" }
+-- local sonokai_variants = { "shusia", "maia", "espresso", "andromeda", "atlantis", "default" }
+local sonokai_variants = { "maia", "espresso", "andromeda" }
 
 return {
   opt = {
