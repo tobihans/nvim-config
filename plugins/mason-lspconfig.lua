@@ -12,6 +12,5 @@ return {
     "marksman",
     "nimls",
     "cssls",
-    "sqls",
   },
 }
