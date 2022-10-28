@@ -1,3 +1,6 @@
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shortmess+=c
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -94,8 +97,12 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
     " Get all folds opened on open
     autocmd Syntax * normal zR
-      " ALX Betty rule hard tabs
-      autocmd FileType c setl noexpandtab
+    " ALX Betty rule hard tabs
+    autocmd FileType c setl noexpandtab
+
+    autocmd FileType python,yaml setl tabstop=4
+    autocmd FileType python,yaml setl softtabstop=4
+    autocmd FileType python,yaml setl shiftwidth=4
 endif
 
 " Don't close window, when deleting a buffer
@@ -141,7 +148,6 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 " Abbreviations
-cabbrev git Git
 iabbrev author Hans Tognon <learningway403@gmail.com>
 iabbrev gh_user tobihans
 

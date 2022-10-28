@@ -5,6 +5,8 @@ return {
   { "kylechui/nvim-surround" },
   { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
   { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
+  { "tiagovla/scope.nvim", before = "bufferline", config = function() require("scope").setup() end },
+  { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end },
   {
     "kkoomen/vim-doge",
     run = ":call doge#install()",
@@ -27,7 +29,7 @@ return {
     -- TODO: Move to autocmd for sql buffers or override cmp setup for filetype
     config = function() astronvim.add_user_cmp_source "vim-dadbod-completion" end,
   },
-  { "tiagovla/scope.nvim", before = "bufferline", config = function() require("scope").setup() end },
+  { "nvim-telescope/telescope-smart-history.nvim", requires = "kkharji/sqlite.lua" },
   -- disable due to conflicts with which key
   -- {
   --   "folke/noice.nvim",
@@ -48,7 +50,6 @@ return {
   --   config = function() require("mind").setup() end,
   -- },
   --
-  -- { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end },
   -- { "Pocco81/true-zen.nvim" },
   -- Themes
   { "sainnhe/sonokai" },
