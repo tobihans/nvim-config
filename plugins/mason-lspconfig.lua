@@ -10,7 +10,6 @@ return {
     "tsserver",
     "pyright",
     "marksman",
-    "nimls",
     "cssls",
   },
 }

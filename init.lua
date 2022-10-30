@@ -100,7 +100,6 @@ local config = {
     virtual_text = true,
     underline = true,
   },
-
 }
 
 return config

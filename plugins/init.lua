@@ -6,7 +6,6 @@ return {
   { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
   { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
   { "tiagovla/scope.nvim", before = "bufferline", config = function() require("scope").setup() end },
-  { "Pocco81/auto-save.nvim", config = function() require("auto-save").setup() end },
   {
     "kkoomen/vim-doge",
     run = ":call doge#install()",
