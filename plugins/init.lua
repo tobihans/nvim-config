@@ -3,8 +3,6 @@ return {
   { "mattn/emmet-vim" },
   { "mg979/vim-visual-multi" },
   { "kylechui/nvim-surround" },
-  { "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" },
-  { "kosayoda/nvim-lightbulb", requires = "antoinemadec/FixCursorHold.nvim" },
   { "tiagovla/scope.nvim", before = "bufferline", config = function() require("scope").setup() end },
   {
     "kkoomen/vim-doge",
@@ -29,29 +27,13 @@ return {
     config = function() astronvim.add_user_cmp_source "vim-dadbod-completion" end,
   },
   { "nvim-telescope/telescope-smart-history.nvim", requires = "kkharji/sqlite.lua" },
-  -- disable due to conflicts with which key
-  -- {
-  --   "folke/noice.nvim",
-  --   event = "VimEnter",
-  --   config = function()
-  --     require("noice").setup()
-  --   end,
-  --   requires = {
-  --     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-  --     "MunifTanjim/nui.nvim",
-  --     "rcarriga/nvim-notify",
-  --   }
-  -- },
-  -- {
-  --   "phaazon/mind.nvim",
-  --   branch = "v2.2",
-  --   requires = { "nvim-lua/plenary.nvim" },
-  --   config = function() require("mind").setup() end,
-  -- },
-  --
   -- { "Pocco81/true-zen.nvim" },
+
+  ------------------------------------------------------------------------------------------------
   -- Themes
+  ------------------------------------------------------------------------------------------------
   { "sainnhe/sonokai" },
+  { "Yazeed1s/oh-lucy.nvim" },
   -- {
   --   "catppuccin/nvim",
   --   as = "catppuccin",
