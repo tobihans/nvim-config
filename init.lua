@@ -14,7 +14,7 @@ local header = {
   "",
 }
 
-local preferred_colorschemes = { "sonokai", "oh-lucy", "oh-lucy-evening" }
+local preferred_colorschemes = { "sonokai" }
 
 local config = {
   header = header,

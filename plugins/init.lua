@@ -33,7 +33,7 @@ return {
   -- Themes
   ------------------------------------------------------------------------------------------------
   { "sainnhe/sonokai" },
-  { "Yazeed1s/oh-lucy.nvim" },
+  -- { "Yazeed1s/oh-lucy.nvim" },
   -- {
   --   "catppuccin/nvim",
   --   as = "catppuccin",
