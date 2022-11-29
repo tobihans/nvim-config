@@ -1,4 +1,5 @@
 return function(config)
+        ---@diagnostic disable-next-line: different-requires
         local null_ls = require "null-ls"
         -- Check supported formatters and linters
         -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting

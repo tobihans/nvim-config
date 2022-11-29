@@ -147,7 +147,3 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-" Abbreviations
-iabbrev author Hans Tognon <learningway403@gmail.com>
-iabbrev gh_user tobihans
-
