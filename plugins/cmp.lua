@@ -2,15 +2,19 @@ local luasnip = require "luasnip"
 local cmp = require "cmp"
 
 local has_words_before = function()
-  local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+  local cursor_pos = vim.api.nvim_win_get_cursor(0)
+
+  if cursor_pos == nil then return false end
+
+  ---@diagnostic disable-next-line: deprecated
+  local line, col = table.unpack(cursor_pos)
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
 function leave_snippet()
-  if
-    ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
-    and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
-    and not luasnip.session.jump_active
+  if ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+      and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
+      and not luasnip.session.jump_active
   then
     luasnip.unlink_current()
   end
