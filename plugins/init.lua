@@ -32,7 +32,11 @@ return {
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
-  { "sainnhe/sonokai" },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+  },
+  -- { "sainnhe/sonokai" },
   -- { "Yazeed1s/oh-lucy.nvim" },
   -- {
   --   "catppuccin/nvim",
@@ -53,11 +57,6 @@ return {
   -- { 'sainnhe/edge' },
   -- { "folke/tokyonight.nvim" },
   -- { "navarasu/onedark.nvim" },
-  -- {
-  --   "rose-pine/neovim",
-  --   as = "rose-pine",
-  --   tag = "v1.*",
-  -- },
   -- { 'whatyouhide/vim-gotham' },
   -- { "arcticicestudio/nord-vim" },
   -- { 'KeitaNakamura/neodark.vim' },
