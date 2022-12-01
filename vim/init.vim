@@ -97,12 +97,9 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
     " Get all folds opened on open
     autocmd Syntax * normal zR
-    " ALX Betty rule hard tabs
-    autocmd FileType c setl noexpandtab
 
-    autocmd FileType python,yaml setl tabstop=4
-    autocmd FileType python,yaml setl softtabstop=4
-    autocmd FileType python,yaml setl shiftwidth=4
+    autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2
 endif
 
 " Don't close window, when deleting a buffer

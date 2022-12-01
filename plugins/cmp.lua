@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: different-requires
 local luasnip = require "luasnip"
 local cmp = require "cmp"
 

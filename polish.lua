@@ -18,6 +18,6 @@ return function()
     vim.keymap.set("n", "<leader>c", function() alpha_on_bye "bdelete!" end, { desc = "Close buffer" })
   end
 
-  -- load additional config
+  -- Nothing is best than VimScript for polishing
   vim.cmd "source ~/.config/nvim/lua/user/vim/init.vim"
 end
