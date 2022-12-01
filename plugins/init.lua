@@ -9,14 +9,15 @@ return {
     run = ":call doge#install()",
   },
   {
-    "anuvyklack/fold-preview.nvim",
-    requires = "anuvyklack/keymap-amend.nvim",
-    config = function() require("fold-preview").setup() end,
-  },
-  {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
     config = function() require("todo-comments").setup() end,
+  },
+  {
+    "phaazon/mind.nvim",
+    branch = "v2.2",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function() require("mind").setup() end,
   },
   {
     "kristijanhusak/vim-dadbod-ui",
@@ -27,7 +28,7 @@ return {
     config = function() astronvim.add_user_cmp_source "vim-dadbod-completion" end,
   },
   { "nvim-telescope/telescope-smart-history.nvim", requires = "kkharji/sqlite.lua" },
-  -- { "Pocco81/true-zen.nvim" },
+  { "Pocco81/true-zen.nvim" }, -- when reading code
 
   ------------------------------------------------------------------------------------------------
   -- Themes

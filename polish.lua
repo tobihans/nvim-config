@@ -7,6 +7,8 @@ local function alpha_on_bye(cmd)
   if utils.is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
 end
 
+-- A function run last by AstroNvim
+-- Polish my neovom setup with these last pieces
 return function()
   vim.keymap.del("n", "<leader>c")
 
