@@ -24,7 +24,6 @@ return {
     requires = { "tpope/vim-dadbod", "tpope/vim-dotenv", "kristijanhusak/vim-dadbod-completion" },
     cmd = "DBUIToggle",
     after = "nvim-cmp",
-    -- TODO: Move to autocmd for sql buffers or override cmp setup for filetype
     config = function() astronvim.add_user_cmp_source "vim-dadbod-completion" end,
   },
   { "nvim-telescope/telescope-smart-history.nvim", requires = "kkharji/sqlite.lua" },
