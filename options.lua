@@ -41,7 +41,7 @@ return {
     foldmethod = "expr",
     fillchars = "fold: ",
     foldexpr = "nvim_treesitter#foldexpr()",
-    foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))]],
+    foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'···'.trim(getline(v:foldend))]],
     -- No backup
     backup = false,
     wb = false,
