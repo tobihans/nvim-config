@@ -28,6 +28,7 @@ return {
   },
   { "nvim-telescope/telescope-smart-history.nvim", requires = "kkharji/sqlite.lua" },
   { "Pocco81/true-zen.nvim" }, -- when reading code
+  { "gpanders/editorconfig.nvim" },
 
   ------------------------------------------------------------------------------------------------
   -- Themes

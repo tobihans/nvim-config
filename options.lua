@@ -21,9 +21,9 @@ return {
     wrap = true, -- wrap lines
     expandtab = true,
     smarttab = true,
-    tabstop = 2,
-    softtabstop = 2,
-    shiftwidth = 2,
+    tabstop = 4,
+    softtabstop = 4,
+    shiftwidth = 4,
     magic = true, -- magic on for regex
     showmatch = true, -- show matching brackets
     mat = 2, -- blink for 2 thenth of a second for brackets matching

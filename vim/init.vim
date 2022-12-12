@@ -1,10 +1,9 @@
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
 set shortmess+=c
+
 " Set to auto read when a file is changed from the outside
 set autoread
 au FocusGained,BufEnter * checktime
+
 " Turn on the Wild menu
 set wildmenu
 " Ignore compiled files
@@ -14,9 +13,11 @@ if has("win16") || has("win32")
 else
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
+
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -94,12 +95,9 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh :call CleanExtraSpaces()
     " Get all folds opened on open
     autocmd Syntax * normal zR
-
-    autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
-    autocmd FileType yaml setl tabstop=2 softtabstop=2 shiftwidth=2
 endif
 
 " Don't close window, when deleting a buffer
