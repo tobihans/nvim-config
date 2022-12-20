@@ -4,12 +4,12 @@ return {
     "rust_analyzer",
     "clangd",
     "intelephense",
-    "tailwindcss",
     "yamlls",
     "volar",
     "tsserver",
     "pyright",
     "marksman",
     "cssls",
+    "taplo",
   },
 }
