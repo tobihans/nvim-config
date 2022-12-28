@@ -33,10 +33,12 @@ return {
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
-  {
-    "rose-pine/neovim",
-    as = "rose-pine",
-  },
+  { "arcticicestudio/nord-vim" },
+  -- {
+  --   "rose-pine/neovim",
+  --   as = "rose-pine",
+  --   config = function() require("rose-pine").setup { dark_variant = "moon" } end,
+  -- },
   -- { "sainnhe/sonokai" },
   -- { "Yazeed1s/oh-lucy.nvim" },
   -- {
@@ -59,6 +61,5 @@ return {
   -- { "folke/tokyonight.nvim" },
   -- { "navarasu/onedark.nvim" },
   -- { 'whatyouhide/vim-gotham' },
-  -- { "arcticicestudio/nord-vim" },
   -- { 'KeitaNakamura/neodark.vim' },
 }
