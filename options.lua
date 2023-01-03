@@ -55,5 +55,6 @@ return {
     sonokai_better_performance = 1,
     sonokai_enable_italic = 1,
     db_ui_winwidth = 28,
+    autoformat_enabled = false,
   },
 }
