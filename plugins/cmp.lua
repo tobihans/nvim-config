@@ -1,3 +1,5 @@
+table.unpack = table.unpack or unpack -- 5.1 compatibility, see https://github.com/hrsh7th/nvim-cmp/issues/1017
+
 ---@diagnostic disable-next-line: different-requires
 local luasnip = require "luasnip"
 local cmp = require "cmp"
@@ -7,7 +9,6 @@ local has_words_before = function()
 
   if cursor_pos == nil then return false end
 
-  ---@diagnostic disable-next-line: deprecated
   local line, col = table.unpack(cursor_pos)
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
