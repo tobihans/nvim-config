@@ -34,6 +34,8 @@ return {
   -- Themes
   ------------------------------------------------------------------------------------------------
   { "arcticicestudio/nord-vim" },
+  { 'sainnhe/edge' },
+  { "shaunsingh/solarized.nvim" },
   -- {
   --   "rose-pine/neovim",
   --   as = "rose-pine",
@@ -55,11 +57,8 @@ return {
   --   end,
   -- },
   -- { "EdenEast/nightfox.nvim", run = ":NightfoxCompile" },
-  -- { "shaunsingh/solarized.nvim" },
   -- { 'sainnhe/everforest' },
-  -- { 'sainnhe/edge' },
   -- { "folke/tokyonight.nvim" },
   -- { "navarasu/onedark.nvim" },
-  -- { 'whatyouhide/vim-gotham' },
   -- { 'KeitaNakamura/neodark.vim' },
 }
