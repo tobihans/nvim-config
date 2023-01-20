@@ -33,14 +33,15 @@ return {
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
-  { "arcticicestudio/nord-vim" },
-  { 'sainnhe/edge' },
-  { "shaunsingh/solarized.nvim" },
-  -- {
-  --   "rose-pine/neovim",
-  --   as = "rose-pine",
-  --   config = function() require("rose-pine").setup { dark_variant = "moon" } end,
-  -- },
+  {
+    "rose-pine/neovim",
+    as = "rose-pine",
+    config = function() require("rose-pine").setup { dark_variant = "moon" } end,
+  },
+  -- { "uloco/bluloco.nvim", requires = {"rktjmp/lush.nvim"}},
+  -- { "arcticicestudio/nord-vim" },
+  -- { 'sainnhe/edge' },
+  -- { "shaunsingh/solarized.nvim" },
   -- { "sainnhe/sonokai" },
   -- { "Yazeed1s/oh-lucy.nvim" },
   -- {
