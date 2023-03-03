@@ -85,21 +85,6 @@ local config = {
       path = 250,
     },
   },
-
-  -- Extend LSP configuration
-  lsp = {
-    servers = {},
-    mappings = {
-      n = {},
-    },
-    ["server-settings"] = {},
-  },
-
-  -- Diagnostics configuration (for vim.diagnostics.config({}))
-  diagnostics = {
-    virtual_text = true,
-    underline = true,
-  },
 }
 
 return config
