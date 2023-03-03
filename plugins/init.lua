@@ -31,16 +31,6 @@ return {
       }
     end,
   },
-  {
-    "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
-    after = "nvim-cmp",
-    config = function()
-      require("crates").setup()
-      astronvim.add_cmp_source("crates", 500)
-    end,
-  },
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
