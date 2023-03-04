@@ -34,11 +34,12 @@ return {
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
-  {
-    "rose-pine/neovim",
-    as = "rose-pine",
-    config = function() require("rose-pine").setup { dark_variant = "moon" } end,
-  },
+  { 'frenzyexists/aquarium-vim' },
+  -- {
+  --   "rose-pine/neovim",
+  --   as = "rose-pine",
+  --   config = function() require("rose-pine").setup { dark_variant = "moon" } end,
+  -- },
   -- { "uloco/bluloco.nvim", requires = {"rktjmp/lush.nvim"}},
   -- { "arcticicestudio/nord-vim" },
   -- { 'sainnhe/edge' },
