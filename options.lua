@@ -50,6 +50,7 @@ return {
   g = {
     mapleader = ",",
     doge_enable_mappings = 0,
+    heirline_bufferline = true,
     -- sonokai_style = sonokai_variants[math.random(#sonokai_variants)],
     -- sonokai_better_performance = 1,
     -- sonokai_enable_italic = 1,

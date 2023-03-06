@@ -34,7 +34,20 @@ return {
   ------------------------------------------------------------------------------------------------
   -- Themes
   ------------------------------------------------------------------------------------------------
-  { 'frenzyexists/aquarium-vim' },
+  {
+    "uloco/bluloco.nvim",
+    requires = { "rktjmp/lush.nvim" },
+    config = function()
+      require("bluloco").setup {
+        style = "auto",
+        transparent = false,
+        italics = true,
+        terminal = true,
+        guicursor = true,
+      }
+    end,
+  },
+  -- { 'frenzyexists/aquarium-vim' },
   -- {
   --   "rose-pine/neovim",
   --   as = "rose-pine",

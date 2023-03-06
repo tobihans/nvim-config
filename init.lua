@@ -13,7 +13,7 @@ local header = {
   "",
 }
 
-local preferred_colorschemes = { "aquarium" }
+local preferred_colorschemes = { "bluloco" }
 
 local config = {
   header = header,
