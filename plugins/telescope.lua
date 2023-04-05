@@ -1,10 +1,15 @@
-return function(opts)
-  opts.defaults["history"] = {
-    path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
-    limit = 100,
-  }
+return {
+  "nvim-telescope/telescope.nvim",
+  dependencies = {{"nvim-telescope/telescope-smart-history.nvim", dependencies = {"kkharji/sqlite.lua"}} },
+  config = function(plugin, opts)
+    local telescope = require "telescope"
 
-  opts.extensions = { "smart_history" }
+    opts.defaults["history"] = {
+      path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
+      limit = 100,
+    }
 
-  return opts
-end
+    require("plugins.configs.telescope")(plugin, opts)
+    telescope.load_extension "smart_history"
+  end,
+}

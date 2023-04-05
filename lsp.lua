@@ -1,9 +1,6 @@
 -- Extend LSP configuration
 return {
-  servers = {},
-  skip_setup = { "rust_analyzer" },
-  mappings = {
-    n = {},
+  setup_handlers = {
+    rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
   },
-  ["server-settings"] = {},
 }

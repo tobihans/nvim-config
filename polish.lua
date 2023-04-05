@@ -1,4 +1,4 @@
-local utils = require "core.utils"
+local utils = require "astronvim.utils"
 
 -- open dashboard when all buffers are closed
 local function alpha_on_bye(cmd)

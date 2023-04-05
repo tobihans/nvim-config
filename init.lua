@@ -1,23 +1,6 @@
-local header = {
-  " 110100000110001010101Bignon011101K.0010100001010010010",
-  "",
-  " ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
-  " ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
-  " ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
-  " ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
-  " ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
-  " ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
-  "",
-  " 01010100011Hans01010001101001Tognon0010100001010010010",
-  "",
-  "",
-}
-
 local preferred_colorschemes = { "bluloco" }
 
 local config = {
-  header = header,
-
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
@@ -32,37 +15,6 @@ local config = {
 
   -- Set colorscheme
   colorscheme = preferred_colorschemes[math.random(#preferred_colorschemes)],
-
-  -- Default theme configuration
-  default_theme = {
-    diagnostics_style = { italic = true },
-    -- Modify the color table
-    colors = {
-      fg = "#abb2bf",
-    },
-    plugins = { -- enable or disable extra plugin highlighting
-      aerial = true,
-      beacon = false,
-      bufferline = true,
-      dashboard = true,
-      highlighturl = true,
-      hop = false,
-      indent_blankline = true,
-      lightspeed = false,
-      ["neo-tree"] = true,
-      notify = true,
-      ["nvim-tree"] = false,
-      ["nvim-web-devicons"] = true,
-      rainbow = true,
-      symbols_outline = false,
-      telescope = true,
-      vimwiki = false,
-      ["which-key"] = true,
-    },
-  },
-
-  -- Configure plugins
-  plugins = {}, -- splitted across multiple files
 
   -- LuaSnip Options
   luasnip = {
