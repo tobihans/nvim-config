@@ -22,5 +22,17 @@ return {
   },
   skip_setup = {
     "rust_analyzer",
+    "dartls",
+  },
+  config = {
+    dartls = {
+      color = {
+        enabled = true,
+      },
+      settings = {
+        showTodos = true,
+        completeFunctionCalls = true,
+      },
+    },
   },
 }

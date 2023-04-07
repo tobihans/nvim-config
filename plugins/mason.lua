@@ -8,7 +8,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "denols",
-        "jdtls",
+        "jsonls",
         "rust_analyzer",
         "clangd",
         "intelephense",

@@ -11,6 +11,7 @@ return {
       "javascript",
       "java",
       "json",
+      "jsonc",
       "lua",
       "markdown",
       "markdown_inline",
