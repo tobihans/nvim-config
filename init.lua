@@ -1,22 +1,18 @@
-local preferred_colorschemes = { "bluloco" }
-
 local config = {
-  -- Configure AstroNvim updates
   updater = {
-    remote = "origin", -- remote to use
-    channel = "stable", -- "stable" or "nightly"
-    version = "latest", -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
-    branch = "main", -- branch name (NIGHTLY ONLY)
-    commit = nil, -- commit hash (NIGHTLY ONLY)
-    pin_plugins = nil, -- nil, true, false (nil will pin plugins on stable only)
-    skip_prompts = false, -- skip prompts about breaking changes
+    remote = "origin",     -- remote to use
+    channel = "stable",    -- "stable" or "nightly"
+    version = "latest",    -- "latest", tag name, or regex search like "v1.*" to only do updates before v2 (STABLE ONLY)
+    branch = "main",       -- branch name (NIGHTLY ONLY)
+    commit = nil,          -- commit hash (NIGHTLY ONLY)
+    pin_plugins = nil,     -- nil, true, false (nil will pin plugins on stable only)
+    skip_prompts = false,  -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
   },
-
   -- Set colorscheme
-  colorscheme = preferred_colorschemes[math.random(#preferred_colorschemes)],
-
+  colorscheme = "bluloco",
   -- LuaSnip Options
+  -- FIXME: Move config from here
   luasnip = {
     -- Add paths for including more VS Code style snippets in luasnip
     vscode_snippet_paths = {},
@@ -24,17 +20,6 @@ local config = {
     filetype_extend = {
       javascript = { "javascriptreact", "vue" },
       html = { "htmldjango" },
-    },
-  },
-
-  -- CMP Source Priorities
-  cmp = {
-    source_priority = {
-      nvim_lsp = 1000,
-      ["vim-dadbod-completion"] = 800,
-      luasnip = 750,
-      buffer = 500,
-      path = 250,
     },
   },
 }

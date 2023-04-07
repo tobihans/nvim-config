@@ -1,6 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = {{"nvim-telescope/telescope-smart-history.nvim", dependencies = {"kkharji/sqlite.lua"}} },
+  dependencies = { { "nvim-telescope/telescope-smart-history.nvim", dependencies = { "kkharji/sqlite.lua" } } },
   config = function(plugin, opts)
     local telescope = require "telescope"
 
@@ -9,7 +9,8 @@ return {
       limit = 100,
     }
 
-    require("plugins.configs.telescope")(plugin, opts)
+    require "plugins.configs.telescope" (plugin, opts)
     telescope.load_extension "smart_history"
   end,
 }
+

@@ -3,9 +3,12 @@ return {
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
+    priority = 100,
     opts = {
       ensure_installed = {
         "lua_ls",
+        "denols",
+        "jdtls",
         "rust_analyzer",
         "clangd",
         "intelephense",
@@ -16,6 +19,7 @@ return {
         "marksman",
         "cssls",
         "taplo",
+        "clangd",
       },
     },
   },
@@ -23,13 +27,13 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      -- ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettier", "stylua" },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
-      -- ensure_installed = { "python" },
+      ensure_installed = { "python" },
     },
   },
 }

@@ -12,7 +12,8 @@ end
 function leave_snippet()
   local luasnip = require "luasnip"
 
-  if ((vim.v.event.old_mode == "s" or vim.v.event.old_mode == "i") and vim.v.event.new_mode == "n")
+  if
+      ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
       and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
       and not luasnip.session.jump_active
   then
@@ -20,40 +21,40 @@ function leave_snippet()
   end
 end
 
+return {
+  -- override nvim-cmp plugin
+  "hrsh7th/nvim-cmp",
+  -- override the options table that is used in the `require("cmp").setup()` call
+  opts = function(_, opts)
+    local luasnip = require "luasnip"
+    local cmp = require "cmp"
 
-return { -- override nvim-cmp plugin
-      "hrsh7th/nvim-cmp",
-      -- override the options table that is used in the `require("cmp").setup()` call
-      opts = function(_, opts)
-        local luasnip = require "luasnip"
-        local cmp = require "cmp"
+    opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_locally_jumpable() then
+        luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
+      else
+        fallback()
+      end
+    end, { "i", "s" })
 
-        opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_locally_jumpable() then
-            luasnip.expand_or_jump()
-          elseif has_words_before() then
-            cmp.complete()
-          else
-            fallback()
-          end
-        end, { "i", "s" })
-      
-        opts.mapping["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
-          else
-            fallback()
-          end
-        end, { "i", "s" })
-      
-        -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
-        -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
-        vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
-      
-        return opts
-      end,
-    }
+    opts.mapping["<S-Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" })
+
+    -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
+    -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
+    vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
+
+    return opts
+  end,
+}

@@ -2,7 +2,7 @@ return {
   {
     "uloco/bluloco.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 1500,
     dependencies = { "rktjmp/lush.nvim" },
     config = function()
       require("bluloco").setup {
@@ -45,3 +45,4 @@ return {
   -- { "navarasu/onedark.nvim" },
   -- { 'KeitaNakamura/neodark.vim' },
 }
+

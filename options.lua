@@ -1,6 +1,3 @@
--- local sonokai_variants = { "shusia", "maia", "espresso", "andromeda", "atlantis", "default" }
--- local sonokai_variants = { "maia", "atlantis", "andromeda" }
-
 return {
   opt = {
     so = 7, -- 7 lines to the cursor when moving with j/k
@@ -48,14 +45,6 @@ return {
     swapfile = false,
   },
   g = {
-    mapleader = ",",
-    doge_enable_mappings = 0,
-    heirline_bufferline = true,
-    -- sonokai_style = sonokai_variants[math.random(#sonokai_variants)],
-    -- sonokai_better_performance = 1,
-    -- sonokai_enable_italic = 1,
-    db_ui_winwidth = 28,
-    autoformat_enabled = false,
-    aqua_bold = 1,
+    mapleader = ","
   },
 }

@@ -3,11 +3,13 @@ return {
   opts = {
     ensure_installed = {
       "bash",
+      "dart",
       "c",
       "cpp",
       "css",
       "html",
       "javascript",
+      "java",
       "json",
       "lua",
       "markdown",
@@ -39,5 +41,5 @@ return {
         "xml",
       },
     },
-  }
+  },
 }
