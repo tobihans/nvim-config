@@ -1,22 +1,12 @@
 return {
-  { "mattn/emmet-vim",            lazy = false },
-  { "mg979/vim-visual-multi",     lazy = false },
-  { "kylechui/nvim-surround",     lazy = false },
+  { "mattn/emmet-vim", lazy = false },
+  { "mg979/vim-visual-multi", lazy = false },
+  { "kylechui/nvim-surround", lazy = false },
   { "gpanders/editorconfig.nvim", lazy = false },
-  { "Pocco81/true-zen.nvim",      cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
-  { "mfussenegger/nvim-jdtls",    lazy = false },
-  {
-    "simrat39/rust-tools.nvim",
-    lazy = false,
-    dependencies = {
-      "neovim/nvim-lspconfig",
-      "nvim-lua/plenary.nvim",
-      "mfussenegger/nvim-dap",
-    },
-  },
+  { "Pocco81/true-zen.nvim", cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
   {
     "akinsho/flutter-tools.nvim",
-    lazy = false,
+    -- lazy = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
@@ -32,7 +22,6 @@ return {
     "folke/todo-comments.nvim",
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function() require("todo-comments").setup() end,
   },
   {
     "kristijanhusak/vim-dadbod-ui",

@@ -20,6 +20,7 @@ return {
         "cssls",
         "taplo",
         "clangd",
+        "ruff_lsp",
       },
     },
   },
@@ -27,13 +28,16 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua" },
+      ensure_installed = { "prettier", "stylua", "black", "isort" },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
-      ensure_installed = { "python" },
+      ensure_installed = {
+        "python",
+        "codelldb",
+      },
     },
   },
 }
