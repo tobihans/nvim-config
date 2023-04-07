@@ -26,6 +26,7 @@ return {
       "typescript",
       "vim",
       "yaml",
+      "tsx",
     },
     highlight = { enable = true },
     indent = { enable = true },

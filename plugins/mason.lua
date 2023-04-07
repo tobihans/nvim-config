@@ -7,6 +7,7 @@ return {
     opts = {
       ensure_installed = {
         "lua_ls",
+        "bashls",
         "denols",
         "jsonls",
         "rust_analyzer",
@@ -21,6 +22,7 @@ return {
         "taplo",
         "clangd",
         "ruff_lsp",
+        "phpactor",
       },
     },
   },
@@ -28,13 +30,15 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua", "black", "isort" },
+      ensure_installed = { "prettier", "stylua", "black", "isort", "shellcheck", "shfmt" },
     },
   },
   {
     "jay-babu/mason-nvim-dap.nvim",
     opts = {
       ensure_installed = {
+        "bash",
+        "php",
         "python",
         "codelldb",
       },
