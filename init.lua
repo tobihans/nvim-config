@@ -1,5 +1,3 @@
-vim.notify("Init.lua", vim.log.levels.INFO)
-
 local config = {
   updater = {
     remote = "origin",     -- remote to use

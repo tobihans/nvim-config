@@ -30,6 +30,9 @@ return {
         lsp_doc_border = true,        -- add a border to hover docs and signature help
       },
     },
-    init = function() vim.g.lsp_handlers_enabled = false end,
+    init = function()
+      vim.g.lsp_handlers_enabled = false
+      require("telescope").load_extension "noice"
+    end,
   },
 }

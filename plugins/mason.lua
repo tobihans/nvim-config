@@ -9,6 +9,7 @@ return {
         "lua_ls",
         "bashls",
         "denols",
+        "jdtls",
         "jsonls",
         "rust_analyzer",
         "clangd",
@@ -31,7 +32,7 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua", "black", "isort", "shellcheck", "shfmt" },
+      ensure_installed = { "prettier", "stylua", "black", "isort", "shellcheck", "shfmt", "clang_format" },
     },
   },
   {
@@ -42,6 +43,8 @@ return {
         "php",
         "python",
         "codelldb",
+        "java-debug-adapter",
+        "java-test",
       },
     },
   },
