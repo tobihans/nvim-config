@@ -1,6 +1,4 @@
 local header = {
-  "",
-  "",
   " 110100000110001010101Bignon011101K.0010100001010010010",
   "",
   " ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
@@ -12,13 +10,12 @@ local header = {
   "",
   " 01010100011Hans01010001101001Tognon0010100001010010010",
   "",
-  "",
 }
 
 return {
   "goolord/alpha-nvim",
   opts = function(_, opts)
-    opts.section.header.val =header
+    opts.section.header.val = header
     return opts
   end,
 }

@@ -3,7 +3,7 @@ return {
     so = 7, -- 7 lines to the cursor when moving with j/k
     hid = true, -- hide abandoned buffers
     ruler = true,
-    cmdheight = 1,
+    cmdheight = 0,
     mouse = "",
     history = 500,
     updatetime = 250,
@@ -30,7 +30,7 @@ return {
     hlsearch = true,
     incsearch = true,
     -- Performance
-    lazyredraw = true,
+    lazyredraw = false, -- disabled due to noice.nvim
     -- Folding
     foldlevelstart = 10,
     foldnestmax = 5,
@@ -45,6 +45,6 @@ return {
     swapfile = false,
   },
   g = {
-    mapleader = ","
+    mapleader = ",",
   },
 }
