@@ -1,17 +1,8 @@
 return {
-  { "mattn/emmet-vim", lazy = false },
+  { "mattn/emmet-vim",        lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
-  { "gpanders/editorconfig.nvim", lazy = false },
-  { "Pocco81/true-zen.nvim", cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
-  {
-    "akinsho/flutter-tools.nvim",
-    -- lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
-    },
-  },
+  { "Pocco81/true-zen.nvim",  cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
   {
     "kkoomen/vim-doge",
     cmd = "DogeGenerate",
