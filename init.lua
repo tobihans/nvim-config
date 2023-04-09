@@ -11,17 +11,6 @@ local config = {
   },
   -- Set colorscheme
   colorscheme = "bluloco",
-  -- LuaSnip Options
-  -- FIXME: Move config from here
-  luasnip = {
-    -- Add paths for including more VS Code style snippets in luasnip
-    vscode_snippet_paths = {},
-    -- Extend filetypes
-    filetype_extend = {
-      javascript = { "javascriptreact", "vue" },
-      html = { "htmldjango" },
-    },
-  },
 }
 
 return config
