@@ -8,4 +8,7 @@ return {
     "<cmd>:VenvSelect<cr>",
     desc = "Pick Python Interpreter",
   } },
+  opts = {
+    name = { "venv", ".venv", "env", ".env" },
+  },
 }
