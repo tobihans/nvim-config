@@ -11,6 +11,14 @@ local config = {
   },
   -- Set colorscheme
   colorscheme = "bluloco",
+  heirline = {
+    separators = {
+      tab = { "", "" },
+    },
+    attributes = {
+      mode = { bold = true },
+    },
+  },
 }
 
 return config
