@@ -6,6 +6,7 @@ return {
     priority = 100,
     opts = {
       ensure_installed = {
+        "vimls",
         "lua_ls",
         "bashls",
         "denols",
