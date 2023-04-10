@@ -20,6 +20,6 @@ return {
     dependencies = { "tpope/vim-dadbod", "tpope/vim-dotenv", "kristijanhusak/vim-dadbod-completion" },
     cmd = "DBUIToggle",
     init = function() vim.g.db_ui_winwidth = 28 end,
-    config = function() require("astronvim.utils.lsp").add_user_cmp_source "vim-dadbod-completion" end,
+    config = function() require("cmp").setup.global { sources = { { name = "vim-dadbod-completion" } } } end,
   },
 }
