@@ -47,5 +47,6 @@ return {
   g = {
     mapleader = ",",
     autoformat_enabled = false,
+    copilot_enabled = true,
   },
 }

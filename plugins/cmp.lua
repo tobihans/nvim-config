@@ -22,39 +22,60 @@ function leave_snippet()
 end
 
 return {
-  -- override nvim-cmp plugin
-  "hrsh7th/nvim-cmp",
-  -- override the options table that is used in the `require("cmp").setup()` call
-  opts = function(_, opts)
-    local luasnip = require "luasnip"
-    local cmp = require "cmp"
+  {
+    "zbirenbaum/copilot.lua",
+    disabled = not vim.g.copilot_enabled,
+    cmd = "Copilot",
+    event = "User AstroFile",
+    opts = { panel = { enabled = false }, suggestion = { auto_trigger = true, debounce = 100 } },
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = { "zbirenbaum/copilot.lua" },
+    opts = function(_, opts)
+      local cmp = require "cmp"
+      local luasnip = require "luasnip"
+      local copilot = require "copilot.suggestion"
 
-    opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
-      elseif has_words_before() then
-        cmp.complete()
-      else
-        fallback()
+      opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
+        if vim.g.copilot_enabled and copilot.is_visible() then
+          copilot.accept()
+        elseif cmp.visible() then
+          cmp.select_next_item()
+        elseif luasnip.expand_or_locally_jumpable() then
+          luasnip.expand_or_jump()
+        elseif has_words_before() then
+          cmp.complete()
+        else
+          fallback()
+        end
+      end, { "i", "s" })
+
+      opts.mapping["<S-Tab>"] = cmp.mapping(function(fallback)
+        if cmp.visible() then
+          cmp.select_prev_item()
+        elseif luasnip.jumpable(-1) then
+          luasnip.jump(-1)
+        else
+          fallback()
+        end
+      end, { "i", "s" })
+
+      if vim.g.copilot_enabled then
+        opts.mapping["<C-x>"] = cmp.mapping(function()
+          if copilot.is_visible() then copilot.next() end
+        end)
+
+        opts.mapping["<C-z>"] = cmp.mapping(function()
+          if copilot.is_visible() then copilot.prev() end
+        end)
       end
-    end, { "i", "s" })
 
-    opts.mapping["<S-Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { "i", "s" })
+      -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
+      -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
+      vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
 
-    -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
-    -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
-    vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
-
-    return opts
-  end,
+      return opts
+    end,
+  },
 }
