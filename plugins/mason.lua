@@ -33,7 +33,7 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua", "black", "isort", "shellcheck", "shfmt", "clang_format" },
+      ensure_installed = { "prettier", "stylua", "shellcheck", "shfmt", "clang_format" },
     },
   },
   {
