@@ -3,15 +3,9 @@
 return {
   formatting = {
     format_on_save = {
-      enabled = false,
+      enabled = true,
       allow_filetypes = {
         "lua",
-      },
-      ignore_filetypes = {
-        "rust",
-        "python",
-        "typescript",
-        "javascript",
       },
     },
     disabled = {},

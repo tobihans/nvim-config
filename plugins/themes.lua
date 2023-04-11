@@ -45,4 +45,3 @@ return {
   -- { "navarasu/onedark.nvim" },
   -- { 'KeitaNakamura/neodark.vim' },
 }
-

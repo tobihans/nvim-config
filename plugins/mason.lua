@@ -25,7 +25,6 @@ return {
         "clangd",
         "ruff_lsp",
         "phpactor",
-        "psalm",
       },
     },
   },

@@ -1,6 +1,6 @@
 return {
   opt = {
-    so = 7, -- 7 lines to the cursor when moving with j/k
+    so = 7,     -- 7 lines to the cursor when moving with j/k
     hid = true, -- hide abandoned buffers
     ruler = true,
     cmdheight = 0,
@@ -13,17 +13,17 @@ return {
     -- line break on 500 chars
     lbr = true,
     tw = 500,
-    ai = true, -- auto indentation
-    si = true, -- smart indentation
+    ai = true,   -- auto indentation
+    si = true,   -- smart indentation
     wrap = true, -- wrap lines
     expandtab = true,
     smarttab = true,
     tabstop = 4,
     softtabstop = 4,
     shiftwidth = 4,
-    magic = true, -- magic on for regex
+    magic = true,     -- magic on for regex
     showmatch = true, -- show matching brackets
-    mat = 2, -- blink for 2 thenth of a second for brackets matching
+    mat = 2,          -- blink for 2 thenth of a second for brackets matching
     -- Search
     ignorecase = true,
     smartcase = true,
@@ -46,5 +46,6 @@ return {
   },
   g = {
     mapleader = ",",
+    autoformat_enabled = false,
   },
 }

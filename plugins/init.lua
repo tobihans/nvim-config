@@ -1,8 +1,8 @@
 return {
-  { "mattn/emmet-vim",        lazy = false },
+  { "mattn/emmet-vim", lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
-  { "Pocco81/true-zen.nvim",  cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
+  { "Pocco81/true-zen.nvim", cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
   {
     "kkoomen/vim-doge",
     cmd = "DogeGenerate",

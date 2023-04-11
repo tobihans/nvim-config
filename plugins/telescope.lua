@@ -9,8 +9,7 @@ return {
       limit = 100,
     }
 
-    require "plugins.configs.telescope" (plugin, opts)
+    require "plugins.configs.telescope"(plugin, opts)
     telescope.load_extension "smart_history"
   end,
 }
-
