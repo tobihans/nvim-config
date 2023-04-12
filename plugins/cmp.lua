@@ -38,9 +38,7 @@ return {
       local copilot = require "copilot.suggestion"
 
       opts.mapping["<Tab>"] = cmp.mapping(function(fallback)
-        if vim.g.copilot_enabled and copilot.is_visible() then
-          copilot.accept()
-        elseif cmp.visible() then
+        if cmp.visible() then
           cmp.select_next_item()
         elseif luasnip.expand_or_locally_jumpable() then
           luasnip.expand_or_jump()
@@ -62,6 +60,10 @@ return {
       end, { "i", "s" })
 
       if vim.g.copilot_enabled then
+        opts.mapping["<C-c>"] = cmp.mapping(function()
+          if copilot.is_visible() then copilot.accept() end
+        end)
+
         opts.mapping["<C-x>"] = cmp.mapping(function()
           if copilot.is_visible() then copilot.next() end
         end)
