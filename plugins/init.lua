@@ -1,9 +1,12 @@
 return {
-  {"tiagovla/scope.nvim", lazy=false, priority = 1500},
+  { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   { "mattn/emmet-vim", lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
-  { "Pocco81/true-zen.nvim", cmd = { "TZAtaraxis", "TZMinimalist", "TZNarrow", "TZFocus" } },
+  {
+    "folke/zen-mode.nvim",
+    cmd = "ZenMode",
+  },
   {
     "kkoomen/vim-doge",
     cmd = "DogeGenerate",

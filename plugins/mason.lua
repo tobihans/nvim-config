@@ -25,6 +25,7 @@ return {
         "clangd",
         "ruff_lsp",
         "phpactor",
+        "ansiblels",
       },
     },
   },
