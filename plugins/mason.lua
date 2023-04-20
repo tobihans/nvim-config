@@ -9,7 +9,7 @@ return {
         "vimls",
         "lua_ls",
         "bashls",
-        "denols",
+        -- "denols",
         "jdtls",
         "jsonls",
         "rust_analyzer",
@@ -26,6 +26,7 @@ return {
         "ruff_lsp",
         "phpactor",
         "ansiblels",
+        "eslint",
       },
     },
   },
@@ -34,6 +35,18 @@ return {
     "jay-babu/mason-null-ls.nvim",
     opts = {
       ensure_installed = { "prettier", "stylua", "shellcheck", "shfmt", "clang_format" },
+      handlers = {
+        prettier = function()
+          require("null-ls").register(require("null-ls").builtins.formatting.prettier.with {
+            condition = function(utils)
+              return utils.root_has_file "package.json"
+                  or utils.root_has_file ".prettierrc"
+                  or utils.root_has_file ".prettierrc.json"
+                  or utils.root_has_file ".prettierrc.js"
+            end,
+          })
+        end,
+      },
     },
   },
   {
