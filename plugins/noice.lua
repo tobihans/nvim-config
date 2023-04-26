@@ -1,19 +1,18 @@
 return {
   {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    config = function()
-      require("drop").setup {
-        max = 25,
-        screensaver = false,
-      }
-    end,
-  },
-  {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {
+      messages = {
+        enabled = true,              -- enables the Noice messages UI
+        -- TODO: Implement custom view
+        view = "mini",               -- default view for messages
+        view_error = "mini",         -- view for errors
+        view_warn = "mini",          -- view for warnings
+        view_history = "messages",   -- view for :messages
+        view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
+      },
       lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
         override = {
@@ -58,6 +57,12 @@ return {
           win_options = {
             winhighlight = { Normal = "Normal", FloatBorder = "DiagnosticInfo" },
           },
+        },
+      },
+      routes = {
+        {
+          filter = { find = "No information available" },
+          opts = { skip = true },
         },
       },
     },

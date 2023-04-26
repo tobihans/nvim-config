@@ -1,17 +1,27 @@
 return {
-  { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
-  { "mattn/emmet-vim", lazy = false },
+  { "mattn/emmet-vim",        lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
+  { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
+  {
+    "kkoomen/vim-doge",
+    lazy = false,
+    build = ":call doge#install()",
+    init = function() vim.g.doge_enable_mappings = 0 end,
+  },
   {
     "folke/zen-mode.nvim",
     cmd = "ZenMode",
   },
   {
-    "kkoomen/vim-doge",
-    cmd = "DogeGenerate",
-    build = ":call doge#install()",
-    init = function() vim.g.doge_enable_mappings = 0 end,
+    "folke/drop.nvim",
+    event = "VimEnter",
+    config = function()
+      require("drop").setup {
+        max = 25,
+        screensaver = false,
+      }
+    end,
   },
   {
     "folke/todo-comments.nvim",
