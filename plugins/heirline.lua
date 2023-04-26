@@ -17,7 +17,7 @@ return {
         status.component.fill(),
         status.component.cmd_info(),
         status.component.fill(),
-        status.component.lsp(),
+        status.component.lsp { lsp_progress = false },
         status.component.treesitter(),
         status.component.nav(),
       }
