@@ -62,6 +62,13 @@ return function()
     vim.api.nvim_set_hl(0, newgroup, { link = oldgroup, default = true })
   end
 
+  -- Disable columns for terminal
+  vim.api.nvim_create_augroup("TerminalSetup", { clear = true })
+  vim.api.nvim_create_autocmd("TermEnter", {
+    group = "TerminalSetup",
+    command = "setl nonumber norelativenumber signcolumn=no statuscolumn=",
+  })
+
   -- VimScript
   vim.cmd "source ~/.config/nvim/lua/user/vim/init.vim"
 end
