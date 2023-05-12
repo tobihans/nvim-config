@@ -1,4 +1,5 @@
 return {
+  { "felipeagc/fleet-theme-nvim" },
   { "nyoom-engineering/oxocarbon.nvim" },
   -- {
   --   "uloco/bluloco.nvim",
