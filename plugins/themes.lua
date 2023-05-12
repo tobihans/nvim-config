@@ -1,6 +1,7 @@
 return {
-  { "felipeagc/fleet-theme-nvim" },
-  { "nyoom-engineering/oxocarbon.nvim" },
+  { "rebelot/kanagawa.nvim" },
+  -- { "felipeagc/fleet-theme-nvim" },
+  -- { "nyoom-engineering/oxocarbon.nvim" },
   -- {
   --   "uloco/bluloco.nvim",
   --   lazy = false,
