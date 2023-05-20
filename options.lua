@@ -43,6 +43,7 @@ return {
     backup = false,
     wb = false,
     swapfile = false,
+    shell = "tmux",
   },
   g = {
     mapleader = ",",
