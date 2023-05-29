@@ -1,8 +1,8 @@
 return {
-  { "mattn/emmet-vim",        lazy = false },
+  { "mattn/emmet-vim", lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
-  { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
+  { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   {
     "kkoomen/vim-doge",
     lazy = false,
