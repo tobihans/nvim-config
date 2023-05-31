@@ -9,7 +9,7 @@ return {
         "vimls",
         "lua_ls",
         "bashls",
-        -- "denols",
+        "denols",
         "jdtls",
         "jsonls",
         "rust_analyzer",

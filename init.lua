@@ -18,6 +18,53 @@ local config = {
       mode = { bold = true },
     },
   },
+  lsp = {
+    servers = {
+      "dartls",
+    },
+    skip_setup = {
+      "rust_analyzer",
+      "dartls",
+    },
+    formatting = {
+      format_on_save = {
+        enabled = true,
+        allow_filetypes = {
+          "lua",
+        },
+      },
+      disabled = {},
+      timeout_ms = 1500,
+    },
+    on_attach = function(client, bufnr)
+      -- INFO: Solves DenoLS and TsServer conflict
+      if require("lspconfig").util.root_pattern("deno.json", "deno.jsonc")(vim.fn.getcwd()) then
+        if client.name == "tsserver" then
+          client.stop()
+          return
+        end
+      end
+    end,
+    config = {
+      dartls = {
+        color = {
+          enabled = true,
+        },
+        settings = {
+          showTodos = true,
+          completeFunctionCalls = true,
+        },
+      },
+      tsserver = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern "package.json"
+        return opts
+      end,
+      eslint = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern("package.json", ".eslintrc.json", ".eslintrc.js")
+        return opts
+      end,
+    },
+  },
 }
 
 return config
