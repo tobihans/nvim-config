@@ -36,15 +36,6 @@ local config = {
       disabled = {},
       timeout_ms = 1500,
     },
-    on_attach = function(client, bufnr)
-      -- INFO: Solves DenoLS and TsServer conflict
-      if require("lspconfig").util.root_pattern("deno.json", "deno.jsonc")(vim.fn.getcwd()) then
-        if client.name == "tsserver" then
-          client.stop()
-          return
-        end
-      end
-    end,
     config = {
       dartls = {
         color = {
