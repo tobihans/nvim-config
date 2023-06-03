@@ -2,8 +2,18 @@ return {
   { "mattn/emmet-vim",        lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
-  { "wakatime/vim-wakatime",  lazy = false },
   { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
+  {
+    "wakatime/vim-wakatime",
+    lazy = false,
+    enabled = function()
+      if os.getenv "NVIM_UNATTENDED_INSTALLATION" ~= nil then
+        return false
+      else
+        return true
+      end
+    end,
+  },
   {
     "kkoomen/vim-doge",
     lazy = false,
