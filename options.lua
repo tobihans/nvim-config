@@ -43,7 +43,7 @@ return {
     backup = false,
     wb = false,
     swapfile = false,
-    shell = "tmux",
+    shell = require("utils").detect_shell(),
   },
   g = {
     mapleader = ",",
