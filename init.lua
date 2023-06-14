@@ -22,9 +22,9 @@ local config = {
     servers = {
       "dartls",
     },
-    skip_setup = {
-      "rust_analyzer",
-      "dartls",
+    setup_handlers = {
+      dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
+      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
     },
     formatting = {
       format_on_save = {

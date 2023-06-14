@@ -3,6 +3,7 @@ return {
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
   { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
+  { "akinsho/flutter-tools.nvim", lazy = false },
   {
     "kaarmu/typst.vim",
     ft = "typst",
