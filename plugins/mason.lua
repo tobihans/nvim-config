@@ -26,6 +26,7 @@ return {
         "phpactor",
         "ansiblels",
         "eslint",
+        "typst_lsp"
       },
     },
   },

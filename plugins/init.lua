@@ -4,6 +4,11 @@ return {
   { "kylechui/nvim-surround", lazy = false },
   { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
   {
+    "kaarmu/typst.vim",
+    ft = "typst",
+    lazy = false,
+  },
+  {
     "wakatime/vim-wakatime",
     lazy = false,
     enabled = function()
