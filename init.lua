@@ -19,9 +19,6 @@ local config = {
     },
   },
   lsp = {
-    servers = {
-      "dartls",
-    },
     setup_handlers = {
       dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
       rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
@@ -39,11 +36,11 @@ local config = {
     config = {
       dartls = {
         color = {
-          enabled = true,
+          enabled = false,
         },
         settings = {
-          showTodos = true,
-          completeFunctionCalls = true,
+          showTodos = false,
+          completeFunctionCalls = false,
         },
       },
       tsserver = function(opts)
