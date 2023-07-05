@@ -1,9 +1,10 @@
 return {
-  { "mattn/emmet-vim",        lazy = false },
-  { "mg979/vim-visual-multi", lazy = false },
-  { "kylechui/nvim-surround", lazy = false },
-  { "tiagovla/scope.nvim",    lazy = false, priority = 1500 },
-  { "akinsho/flutter-tools.nvim", lazy = false },
+  { "akinsho/flutter-tools.nvim" },
+  { "p00f/clangd_extensions.nvim" },
+  { "mattn/emmet-vim",            lazy = false },
+  { "mg979/vim-visual-multi",     lazy = false },
+  { "kylechui/nvim-surround",     lazy = false },
+  { "tiagovla/scope.nvim",        lazy = false, priority = 1500 },
   {
     "kaarmu/typst.vim",
     ft = "typst",

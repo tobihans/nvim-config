@@ -22,6 +22,7 @@ local config = {
     setup_handlers = {
       dartls = function(_, opts) require("flutter-tools").setup { lsp = opts } end,
       rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
+      clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
     },
     formatting = {
       format_on_save = {
@@ -34,6 +35,11 @@ local config = {
       timeout_ms = 1500,
     },
     config = {
+      clangd = {
+        capabilities = {
+          offsetEncoding = "utf-8",
+        },
+      },
       dartls = {
         color = {
           enabled = false,
