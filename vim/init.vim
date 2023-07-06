@@ -56,8 +56,6 @@ map <space> /
 map <C-space> ?
 " Disable highlight when <leader><cr> is pressed
 nnoremap <silent> <leader><cr> :noh<cr>
-" Close
-nnoremap <silent> <leader>x :x<cr>
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 " Remap VIM 0 to first non-blank character
@@ -75,7 +73,7 @@ if has("mac") || has("macunix")
 endif
 
 " Edit my config
-nnoremap <M-s> :edit ~/.config/nvim/lua/user/init.lua<cr>
+nnoremap <M-s> :call OpenSettings()<cr>
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
@@ -100,27 +98,6 @@ if has("autocmd")
     autocmd Syntax * normal zR
 endif
 
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-    let l:currentBufNum = bufnr("%")
-    let l:alternateBufNum = bufnr("#")
-
-    if buflisted(l:alternateBufNum)
-        buffer #
-    else
-        bnext
-    endif
-
-    if bufnr("%") == l:currentBufNum
-        new
-    endif
-
-    if buflisted(l:currentBufNum)
-        execute("bdelete! ".l:currentBufNum)
-    endif
-endfunction
-
 function! CmdLine(str)
     call feedkeys(":" . a:str)
 endfunction 
@@ -142,3 +119,7 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
+function! OpenSettings()
+    execute "edit ~/.config/nvim/lua/user/init.lua"
+    execute "cd ~/.config/nvim/lua/user/"
+endfunction
