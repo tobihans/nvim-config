@@ -9,7 +9,7 @@ local config = {
     skip_prompts = false,  -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
   },
-  colorscheme = "kanagawa",
+  colorscheme = "onedark_vivid",
   heirline = {
     separators = {
       tab = { "", "" },
@@ -32,7 +32,7 @@ local config = {
         },
       },
       disabled = {},
-      timeout_ms = 1500,
+      timeout_ms = 5000,
     },
     config = {
       clangd = {
