@@ -12,7 +12,7 @@ return {
     enabled = true,
     config = {
       style = "night",
-      sidebars = { "neo-tree", "qf", "help", "aerial" },
+      sidebars = {},
     },
   },
   { "navarasu/onedark.nvim", enabled = false },
