@@ -7,7 +7,14 @@ return {
   { "frenzyexists/aquarium-vim", enabled = false },
   { "EdenEast/nightfox.nvim", enabled = true, run = ":NightfoxCompile" },
   { "sainnhe/everforest", enabled = false },
-  { "folke/tokyonight.nvim", enabled = false },
+  {
+    "folke/tokyonight.nvim",
+    enabled = true,
+    config = {
+      style = "night",
+      sidebars = { "neo-tree", "qf", "help", "aerial" },
+    },
+  },
   { "navarasu/onedark.nvim", enabled = false },
   { "KeitaNakamura/neodark.vim", enabled = false },
   { "arcticicestudio/nord-vim", enabled = false },
@@ -17,11 +24,7 @@ return {
   { "Yazeed1s/oh-lucy.nvim", enabled = false },
   { "felipeagc/fleet-theme-nvim", enabled = false },
   { "nyoom-engineering/oxocarbon.nvim", enabled = false },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000,
-    enabled = true,
-  },
+  { "olimorris/onedarkpro.nvim", priority = 1000 },
   {
     "rose-pine/neovim",
     enabled = false,
