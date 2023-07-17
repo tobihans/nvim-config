@@ -37,6 +37,7 @@ return {
         "vim",
         "yaml",
         "tsx",
+        "proto",
       },
       highlight = { enable = true },
       indent = { enable = true },
