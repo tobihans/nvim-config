@@ -34,7 +34,7 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua", "shellcheck", "shfmt", "clang_format" },
+      ensure_installed = { "prettier", "stylua", "shellcheck", "shfmt", "clang_format", "protolint" },
       handlers = {
         prettier = function()
           require("null-ls").register(require("null-ls").builtins.formatting.prettier.with {
