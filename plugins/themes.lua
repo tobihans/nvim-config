@@ -5,12 +5,12 @@ return {
   { "savq/melange-nvim", enabled = false },
   { "ray-x/aurora", enabled = false },
   { "frenzyexists/aquarium-vim", enabled = false },
-  { "EdenEast/nightfox.nvim", enabled = true, run = ":NightfoxCompile" },
+  { "EdenEast/nightfox.nvim", enabled = true, build = ":NightfoxCompile" },
   { "sainnhe/everforest", enabled = false },
   {
     "folke/tokyonight.nvim",
     enabled = true,
-    config = {
+    opts = {
       style = "night",
       sidebars = {},
     },
