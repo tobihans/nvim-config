@@ -6,7 +6,6 @@ return {
     opts = {
       messages = {
         enabled = true,              -- enables the Noice messages UI
-        -- TODO: Implement custom view
         view = "mini",               -- default view for messages
         view_error = "mini",         -- view for errors
         view_warn = "mini",          -- view for warnings
