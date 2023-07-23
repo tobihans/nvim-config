@@ -38,6 +38,7 @@ return {
         "yaml",
         "tsx",
         "proto",
+        "http",
       },
       highlight = { enable = true },
       indent = { enable = true },
