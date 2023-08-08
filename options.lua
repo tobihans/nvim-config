@@ -35,10 +35,7 @@ return {
     foldlevelstart = 10,
     foldnestmax = 5,
     foldminlines = 1,
-    foldmethod = "expr",
-    fillchars = "fold: ",
-    foldexpr = "nvim_treesitter#foldexpr()",
-    foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'···'.trim(getline(v:foldend))]],
+    fillchars = "eob: ",
     -- No backup
     backup = false,
     wb = false,
