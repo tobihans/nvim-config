@@ -75,7 +75,7 @@ return {
 
       -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
       -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
-      vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
+      -- vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
 
       return opts
     end,

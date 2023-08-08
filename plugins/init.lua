@@ -1,10 +1,11 @@
 return {
+  { "akinsho/git-conflict.nvim", version = "*", config = true },
   { "akinsho/flutter-tools.nvim" },
   { "p00f/clangd_extensions.nvim" },
-  { "mattn/emmet-vim",            lazy = false },
-  { "mg979/vim-visual-multi",     lazy = false },
-  { "kylechui/nvim-surround",     lazy = false },
-  { "tiagovla/scope.nvim",        lazy = false, priority = 1500 },
+  { "mattn/emmet-vim", lazy = false },
+  { "mg979/vim-visual-multi", lazy = false },
+  { "kylechui/nvim-surround", lazy = false },
+  { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   {
     "kaarmu/typst.vim",
     ft = "typst",

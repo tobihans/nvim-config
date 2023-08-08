@@ -1,12 +1,13 @@
 return {
-  {
-    "folke/tokyonight.nvim",
-    enabled = true,
-    opts = {
-      style = "night",
-      sidebars = {},
-    },
-  },
+  { "savq/melange-nvim", lazy = false, priority = 1000 },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   enabled = false,
+  --   opts = {
+  --     style = "night",
+  --     sidebars = {},
+  --   },
+  -- },
   -- { "projekt0n/github-nvim-theme", enabled = false },
   -- { "rafamadriz/neon", enabled = false },
   -- { "rebelot/kanagawa.nvim", enabled = false },
