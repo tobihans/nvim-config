@@ -6,27 +6,28 @@ return {
     priority = 100,
     opts = {
       ensure_installed = {
-        "vimls",
-        "lua_ls",
+        "ansiblels",
         "bashls",
+        "clangd",
+        "clangd",
+        "cssls",
+        "eslint",
+        "gopls",
+        "intelephense",
         "jdtls",
         "jsonls",
-        "rust_analyzer",
-        "clangd",
-        "intelephense",
-        "yamlls",
-        "volar",
-        "tsserver",
-        "pyright",
+        "lua_ls",
         "marksman",
-        "cssls",
-        "taplo",
-        "clangd",
-        "ruff_lsp",
         "phpactor",
-        "ansiblels",
-        "eslint",
-        "typst_lsp"
+        "pyright",
+        "ruff_lsp",
+        "rust_analyzer",
+        "taplo",
+        "tsserver",
+        "typst_lsp",
+        "vimls",
+        "volar",
+        "yamlls",
       },
     },
   },
@@ -34,15 +35,27 @@ return {
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
-      ensure_installed = { "prettier", "stylua", "shellcheck", "shfmt", "clang_format", "protolint" },
+      ensure_installed = {
+        "prettier",
+        "stylua",
+        "shellcheck",
+        "shfmt",
+        "clang_format",
+        "protolint",
+        "gomodifytags",
+        "gofumpt",
+        "iferr",
+        "impl",
+        "goimports",
+      },
       handlers = {
         prettier = function()
           require("null-ls").register(require("null-ls").builtins.formatting.prettier.with {
             condition = function(utils)
               return utils.root_has_file "package.json"
-                  or utils.root_has_file ".prettierrc"
-                  or utils.root_has_file ".prettierrc.json"
-                  or utils.root_has_file ".prettierrc.js"
+                or utils.root_has_file ".prettierrc"
+                or utils.root_has_file ".prettierrc.json"
+                or utils.root_has_file ".prettierrc.js"
             end,
           })
         end,
@@ -59,6 +72,7 @@ return {
         "codelldb",
         "java-debug-adapter",
         "java-test",
+        "delve", -- go
       },
     },
   },
