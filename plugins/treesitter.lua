@@ -31,6 +31,7 @@ return {
         "markdown",
         "markdown_inline",
         "php",
+        "prisma",
         "proto",
         "python",
         "regex",
