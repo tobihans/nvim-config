@@ -6,14 +6,17 @@ return {
     ["<leader>Df"] = { "<cmd>DBUIFindBuffer<cr>", desc = " DB UI Find buffer" },
     ["<leader>Dr"] = { "<cmd>DBUIRenameBuffer<cr>", desc = " DB UI Rename buffer" },
     ["<leader>Dl"] = { "<cmd>DBUILastQueryInfo<cr>", desc = " DB UI Last query infos" },
+
     -- Rust Tools
-    ["<leader>r"] = { name = " Rust Tools" },
-    ["<leader>rx"] = { "<cmd>RustExpandMacro<cr>", desc = " Expand Macros Recursively" },
-    ["<leader>rj"] = { "<cmd>RustExpandMacro<cr>", desc = " Join Lines" },
-    ["<leader>rc"] = { "<cmd>RustOpenCargo<cr>", desc = " Open Cargo.toml" },
-    ["<leader>rg"] = { "<cmd>RustViewCrateGraph<cr>", desc = " View Crate Graph" },
-    ["<leader>rr"] = { "<cmd>RustRunnables<cr>", desc = " Runnables" },
-    ["<leader>rd"] = { "<cmd>RustDebuggables<cr>", desc = " Debuggables" },
+    ["<leader>R"] = { name = " Rust Tools" },
+    ["<leader>Rx"] = { "<cmd>RustExpandMacro<cr>", desc = " Expand Macros Recursively" },
+    ["<leader>Rj"] = { "<cmd>RustExpandMacro<cr>", desc = " Join Lines" },
+    ["<leader>Rc"] = { "<cmd>RustOpenCargo<cr>", desc = " Open Cargo.toml" },
+    ["<leader>Rg"] = { "<cmd>RustViewCrateGraph<cr>", desc = " View Crate Graph" },
+    ["<leader>Rr"] = { "<cmd>RustRunnables<cr>", desc = " Runnables" },
+    ["<leader>Rd"] = { "<cmd>RustDebuggables<cr>", desc = " Debuggables" },
+
+    -- Flutter Tools
     ["<leader>F"] = { name = " Flutter Tools" },
     ["<leader>Fc"] = {
       function() require("telescope").extensions.flutter.commands() end,
@@ -23,7 +26,8 @@ return {
       function() require("telescope").extensions.flutter.fvm() end,
       desc = "Flutter SDK",
     },
-    -- Navigation
+
+    -- Buffers
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
@@ -35,5 +39,7 @@ return {
     -- Misc
     ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
   },
-  t = {},
+  t = {
+    ["jk"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },
+  },
 }

@@ -40,7 +40,7 @@ return {
     backup = false,
     wb = false,
     swapfile = false,
-    shell = require("user.utils").detect_shell(),
+    -- shell = require("user.utils").detect_shell(),
   },
   g = {
     mapleader = ",",
