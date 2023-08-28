@@ -38,6 +38,15 @@ return {
     },
     -- Misc
     ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
+    -- Overrides
+    ["<leader>th"] = {
+      function() vim.cmd(vim.v.count .. "ToggleTerm size=10 direction=horizontal") end,
+      desc = "ToggleTerm horizontal split",
+    },
+    ["<leader>tv"] = {
+      function() vim.cmd(vim.v.count .. "ToggleTerm size=80 direction=vertical") end,
+      desc = "ToggleTerm vertical split",
+    },
   },
   t = {
     ["jk"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },

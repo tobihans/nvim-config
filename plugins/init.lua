@@ -7,9 +7,28 @@ return {
   { "kylechui/nvim-surround", lazy = false },
   { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   {
+    "m4xshen/hardtime.nvim",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    opts = {
+      disabled_filetypes = {
+        "qf",
+        "netrw",
+        "NvimTree",
+        "lazy",
+        "mason",
+        "oil",
+        "neo-tree",
+        "aerial",
+        "dbui",
+        "help",
+        "noice",
+      },
+    },
+    event = "User AstroFile",
+  },
+  {
     "kaarmu/typst.vim",
     ft = "typst",
-    lazy = false,
   },
   {
     "wakatime/vim-wakatime",
