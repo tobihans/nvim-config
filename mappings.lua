@@ -49,6 +49,6 @@ return {
     },
   },
   t = {
-    ["jk"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },
+    ["<M-esc>"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },
   },
 }
