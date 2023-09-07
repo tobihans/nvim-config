@@ -33,6 +33,10 @@ return {
           opts = { skip = true },
         },
         {
+          filter = { find = "An error happened while handling a ui event" },
+          opts = { skip = true },
+        },
+        {
           filter = {
             event = "msg_show",
             kind = "",

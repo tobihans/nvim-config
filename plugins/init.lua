@@ -1,11 +1,19 @@
 return {
-  { "akinsho/git-conflict.nvim", version = "*", config = true },
+  { "akinsho/git-conflict.nvim", version = "*", config = true, event = "User AstroGitFile" },
   { "akinsho/flutter-tools.nvim" },
   { "p00f/clangd_extensions.nvim" },
   { "mattn/emmet-vim", lazy = false },
   { "mg979/vim-visual-multi", lazy = false },
   { "kylechui/nvim-surround", lazy = false },
   { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
+  {
+    "ThePrimeagen/refactoring.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    cmd = "Refactor",
+  },
   {
     "m4xshen/hardtime.nvim",
     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
