@@ -9,7 +9,7 @@ local config = {
     skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
   },
-  colorscheme = "melange",
+  colorscheme = "rose-pine",
   heirline = {
     separators = {
       tab = { "", "" },

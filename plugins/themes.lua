@@ -1,5 +1,11 @@
 return {
-  { "savq/melange-nvim", lazy = false, priority = 1000 },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    opts = { dark_variant = "moon", bold_vert_split = true },
+  },
+  -- { "nyoom-engineering/oxocarbon.nvim" },
+  -- { "savq/melange-nvim", lazy = false, priority = 1000 },
   -- {
   --   "folke/tokyonight.nvim",
   --   enabled = false,
@@ -24,14 +30,7 @@ return {
   -- { "sainnhe/sonokai", enabled = false },
   -- { "Yazeed1s/oh-lucy.nvim", enabled = false },
   -- { "felipeagc/fleet-theme-nvim", enabled = false },
-  -- { "nyoom-engineering/oxocarbon.nvim", enabled = false },
   -- { "olimorris/onedarkpro.nvim", priority = 1000 },
-  -- {
-  --   "rose-pine/neovim",
-  --   enabled = false,
-  --   as = "rose-pine",
-  --   config = function() require("rose-pine").setup { dark_variant = "moon" } end,
-  -- },
   -- {
   --   "rmehri01/onenord.nvim",
   --   enabled = false,
