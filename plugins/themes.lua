@@ -2,7 +2,7 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    opts = { dark_variant = "moon", bold_vert_split = true },
+    opts = { dark_variant = "moon", bold_vert_split = false },
   },
   -- { "nyoom-engineering/oxocarbon.nvim" },
   -- { "savq/melange-nvim", lazy = false, priority = 1000 },
