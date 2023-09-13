@@ -4,7 +4,7 @@ return {
     lazy = false,
     opts = {
       enable = true,
-      max_lines = 3,
+      max_lines = 5,
       multiline_threshold = 10,
     },
   },
