@@ -1,4 +1,5 @@
 local utils = require "astronvim.utils"
+local self_utils = require "user.utils"
 
 -- open dashboard when all buffers are closed
 local function alpha_on_bye(cmd)
@@ -68,6 +69,9 @@ return function()
     group = "TerminalSetup",
     command = "setl nonumber norelativenumber signcolumn=no statuscolumn=",
   })
+
+  -- Switch between light ans dark themes depending on daytime
+  self_utils.schedule_background_switch()
 
   -- VimScript
   vim.cmd "source ~/.config/nvim/lua/user/vim/init.vim"

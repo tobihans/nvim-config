@@ -46,5 +46,6 @@ return {
     mapleader = ",",
     autoformat_enabled = false,
     copilot_enabled = true,
+    auto_switch_bg = true,
   },
 }

@@ -22,6 +22,7 @@ return {
         "gosum",
         "gowork",
         "html",
+        "htmldjango",
         "http",
         "java",
         "javascript",
