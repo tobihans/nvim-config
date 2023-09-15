@@ -3,7 +3,7 @@ local M = {}
 -- Sets the background based on the time of day
 function M.set_background()
   local hour = tonumber(os.date "%H")
-  local bg = (hour >= 7 and hour <= 18) and "light" or "dark"
+  local bg = (hour > 7 and hour < 18) and "light" or "dark"
   if vim.o.bg ~= bg and vim.g.auto_switch_bg then
     vim.o.bg = bg
     require("astronvim.utils").notify(
