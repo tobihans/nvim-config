@@ -93,9 +93,7 @@ fun! CleanExtraSpaces()
 endfun
 
 if has("autocmd")
-    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh :call CleanExtraSpaces()
-    " Get all folds opened on open
-    autocmd Syntax * normal zR
+    autocmd BufWritePre *.lua, *.txt,*.js,*.py,*.wiki,*.sh :call CleanExtraSpaces()
 endif
 
 function! CmdLine(str)

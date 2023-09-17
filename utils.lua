@@ -16,8 +16,10 @@ end
 
 -- Schedule the background switch
 function M.schedule_background_switch()
-  local timer = vim.loop.new_timer()
-  if timer then timer:start(0, 600, vim.schedule_wrap(M.set_background)) end
+  if vim.g.auto_switch_bg then
+    local timer = vim.loop.new_timer()
+    if timer then timer:start(0, 600, vim.schedule_wrap(M.set_background)) end
+  end
 end
 
 return M
