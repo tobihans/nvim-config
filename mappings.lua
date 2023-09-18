@@ -36,17 +36,29 @@ return {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
+
     -- Misc
     ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
+
     -- Overrides
+    -- NOTE: I wonder why this didn't work when placed in `plugins/telescope.lua`
+    ["<leader>fw"] = {
+      function () require('telescope').extensions.live_grep_args.live_grep_args() end,
+      desc = "Find words",
+    },
     ["<leader>th"] = {
+      -- Adds a count to the command
       function() vim.cmd(vim.v.count .. "ToggleTerm size=10 direction=horizontal") end,
       desc = "ToggleTerm horizontal split",
     },
     ["<leader>tv"] = {
+      -- Adds a count to the command
       function() vim.cmd(vim.v.count .. "ToggleTerm size=80 direction=vertical") end,
       desc = "ToggleTerm vertical split",
     },
+  },
+  v = {
+    ["<leader>f"] = { name = " Find" },
   },
   t = {
     ["<M-esc>"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },
