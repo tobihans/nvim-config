@@ -11,6 +11,7 @@ return {
         "clangd",
         "clangd",
         "cssls",
+        "djlint",
         "eslint",
         "gopls",
         "intelephense",
