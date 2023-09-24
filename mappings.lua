@@ -43,24 +43,22 @@ return {
     -- Overrides
     -- NOTE: I wonder why this didn't work when placed in `plugins/telescope.lua`
     ["<leader>fw"] = {
-      function () require('telescope').extensions.live_grep_args.live_grep_args() end,
+      function() require("telescope").extensions.live_grep_args.live_grep_args() end,
       desc = "Find words",
     },
     ["<leader>th"] = {
-      -- Adds a count to the command
       function() vim.cmd(vim.v.count .. "ToggleTerm size=10 direction=horizontal") end,
       desc = "ToggleTerm horizontal split",
     },
     ["<leader>tv"] = {
-      -- Adds a count to the command
       function() vim.cmd(vim.v.count .. "ToggleTerm size=80 direction=vertical") end,
       desc = "ToggleTerm vertical split",
     },
+    ["<leader>td"] = {
+      function() require("astronvim.utils").toggle_term_cmd("lazydocker") end,
+      desc = "ToggleTerm lazydocker",
+    },
   },
-  v = {
-    ["<leader>f"] = { name = " Find" },
-  },
-  t = {
-    ["<M-esc>"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" },
-  },
+  v = { ["<leader>f"] = { name = " Find" } },
+  t = { ["<M-esc>"] = { "<C-\\><C-n>", desc = " Exit Terminal Mode" } },
 }
