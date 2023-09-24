@@ -74,5 +74,5 @@ return function()
   self_utils.schedule_background_switch()
 
   -- VimScript
-  vim.cmd "source ~/.config/nvim/lua/user/vim/init.vim"
+  vim.cmd "source ~/.config/nvim/lua/user/init.vim"
 end
