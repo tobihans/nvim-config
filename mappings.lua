@@ -55,8 +55,12 @@ return {
       desc = "ToggleTerm vertical split",
     },
     ["<leader>td"] = {
-      function() require("astronvim.utils").toggle_term_cmd("lazydocker") end,
+      function() require("astronvim.utils").toggle_term_cmd "lazydocker" end,
       desc = "ToggleTerm lazydocker",
+    },
+    ["<leader>tb"] = {
+      function() require("astronvim.utils").toggle_term_cmd "btop" end,
+      desc = "ToggleTerm btop",
     },
   },
   v = { ["<leader>f"] = { name = " Find" } },
