@@ -22,10 +22,6 @@ return {
       function() require("telescope").extensions.flutter.commands() end,
       desc = "Flutter Commands",
     },
-    ["<leader>Fs"] = {
-      function() require("telescope").extensions.flutter.fvm() end,
-      desc = "Flutter SDK",
-    },
 
     -- Buffers
     L = {
