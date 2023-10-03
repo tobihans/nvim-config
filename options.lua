@@ -44,6 +44,7 @@ return {
   },
   g = {
     mapleader = ",",
+    maplocalleader = "\\",
     autoformat_enabled = false,
     copilot_enabled = true,
     auto_switch_bg = false,
