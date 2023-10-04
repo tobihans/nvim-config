@@ -18,6 +18,7 @@ return {
         "oil",
         "qf",
         "toggleterm",
+        "octo",
       },
     },
     event = "BufEnter",
