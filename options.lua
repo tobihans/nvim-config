@@ -45,8 +45,9 @@ return {
   g = {
     mapleader = ",",
     maplocalleader = "/",
+    resession_enabled = true,  -- used to scope sessions to tabs
     autoformat_enabled = false,
     copilot_enabled = true,
-    auto_switch_bg = false,
+    auto_switch_bg = true,
   },
 }
