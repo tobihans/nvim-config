@@ -44,7 +44,7 @@ return {
   },
   g = {
     mapleader = ",",
-    maplocalleader = "\\",
+    maplocalleader = "/",
     autoformat_enabled = false,
     copilot_enabled = true,
     auto_switch_bg = false,

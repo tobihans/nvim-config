@@ -23,6 +23,11 @@ return {
       desc = "Flutter Commands",
     },
 
+    -- Gh integration by octo.nvim
+    ["<leader>O"] = { name = "  Octo" },
+    ["<leader>Oo"] = { "<cmd>Octo<cr>", desc = " Pick" },
+    ["<leader>Oa"] = { "<cmd>Octo actions<cr>", desc = " Actions" },
+
     -- Buffers
     L = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
