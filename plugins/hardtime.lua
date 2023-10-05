@@ -19,6 +19,13 @@ return {
         "qf",
         "toggleterm",
         "octo",
+        -- Debugging
+        "dapui_scopes",
+        "dapui_breakpoints",
+        "dapui_stacks",
+        "dapui_watches",
+        "dap-repl",
+        "dapui_console",
       },
     },
     event = "BufEnter",
