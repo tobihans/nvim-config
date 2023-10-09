@@ -4,6 +4,7 @@ return {
     name = "rose-pine",
     opts = { dark_variant = "moon", bold_vert_split = false },
   },
+  { "rebelot/kanagawa.nvim", enabled = true },
   -- { "nyoom-engineering/oxocarbon.nvim" },
   -- { "savq/melange-nvim", lazy = false, priority = 1000 },
   -- {
@@ -16,7 +17,6 @@ return {
   -- },
   -- { "projekt0n/github-nvim-theme", enabled = false },
   -- { "rafamadriz/neon", enabled = false },
-  -- { "rebelot/kanagawa.nvim", enabled = false },
   -- { "savq/melange-nvim", enabled = false },
   -- { "ray-x/aurora", enabled = false },
   -- { "frenzyexists/aquarium-vim", enabled = false },
