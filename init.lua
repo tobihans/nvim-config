@@ -41,6 +41,15 @@ local config = {
       timeout_ms = 5000,
     },
     config = {
+      cssls = {
+        settings = {
+          css = {
+            lint = {
+              unknownAtRules = "ignore",
+            },
+          }
+        }
+      },
       clangd = {
         capabilities = {
           offsetEncoding = "utf-8",
