@@ -1,4 +1,1 @@
-return {
-  "AstroNvim/astrocommunity",
-  { import = "astrocommunity.pack.java" },
-}
+return { import = "astrocommunity.pack.java" }
