@@ -42,6 +42,14 @@ return {
     ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
 
     -- Overrides
+    ["<leader>c"] = {
+      function()
+        local bufs = vim.fn.getbufinfo { buflisted = true }
+        require("astronvim.utils.buffer").close(0)
+        if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then require("alpha").start(true) end
+      end,
+      desc = "Close buffer",
+    },
     -- NOTE: I wonder why this didn't work when placed in `plugins/telescope.lua`
     ["<leader>fw"] = {
       function() require("telescope").extensions.live_grep_args.live_grep_args() end,
