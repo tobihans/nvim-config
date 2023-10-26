@@ -37,6 +37,7 @@ return {
         "javascript",
         "json",
         "jsonc",
+        "kotlin",
         "lua",
         "make",
         "markdown",

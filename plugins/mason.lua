@@ -1,6 +1,4 @@
--- customize mason plugins
 return {
-  -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
     priority = 100,
@@ -17,6 +15,7 @@ return {
         "intelephense",
         "jdtls",
         "jsonls",
+        "kotlin_language_server",
         "lua_ls",
         "marksman",
         "phpactor",
@@ -32,22 +31,22 @@ return {
       },
     },
   },
-  -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources
   {
     "jay-babu/mason-null-ls.nvim",
     opts = {
       ensure_installed = {
-        "prettier",
-        "stylua",
-        "shellcheck",
-        "shfmt",
         "clang_format",
-        "protolint",
-        "gomodifytags",
         "gofumpt",
+        "goimports",
+        "gomodifytags",
         "iferr",
         "impl",
-        "goimports",
+        "ktlint",
+        "prettier",
+        "protolint",
+        "shellcheck",
+        "shfmt",
+        "stylua",
       },
       handlers = {
         prettier = function()
@@ -68,12 +67,13 @@ return {
     opts = {
       ensure_installed = {
         "bash",
-        "php",
-        "python",
         "codelldb",
+        "delve", -- go
         "java-debug-adapter",
         "java-test",
-        "delve", -- go
+        "kotlin",
+        "php",
+        "python",
       },
     },
   },
