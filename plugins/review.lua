@@ -1,3 +1,4 @@
+-- A list of plugins that I want to review and decide if I want to keep them or not.
 return {
   {
     "chrisgrieser/nvim-puppeteer",

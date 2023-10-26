@@ -33,11 +33,6 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-set background=dark
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
 " Specify the behavior when switching between buffers 
 try
   set switchbuf=useopen,usetab,newtab

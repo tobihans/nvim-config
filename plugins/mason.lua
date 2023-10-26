@@ -11,8 +11,7 @@ return {
         "clangd",
         "clangd",
         "cssls",
-        -- TODO: Find the corresponding name for djls
-        -- "djlint",
+        "djlint",
         "eslint",
         "gopls",
         "intelephense",

@@ -40,7 +40,14 @@ return {
     backup = false,
     wb = false,
     swapfile = false,
-    -- shell = require("user.utils").detect_shell(),
+    -- Files
+    encoding = "utf8",
+    ffs = "unix,dos,mac",
+    -- NOTE: More configs related to files appear in the init.vim file
+    -- I find Vimscript to be more readable than Lua for some things,
+    -- Especially, settings things based on conditions
+    -- UI
+    background = "dark",
   },
   g = {
     autoformat_enabled = false,
