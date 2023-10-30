@@ -1,14 +1,14 @@
 return {
   n = {
     -- Database Explorer
-    ["<leader>D"] = { name = " Db Tools" },
+    ["<leader>D"] = { name = "󰆼 Db Tools" },
     ["<leader>Du"] = { "<cmd>DBUIToggle<cr>", desc = " DB UI Toggle" },
     ["<leader>Df"] = { "<cmd>DBUIFindBuffer<cr>", desc = " DB UI Find buffer" },
     ["<leader>Dr"] = { "<cmd>DBUIRenameBuffer<cr>", desc = " DB UI Rename buffer" },
     ["<leader>Dl"] = { "<cmd>DBUILastQueryInfo<cr>", desc = " DB UI Last query infos" },
 
     -- Rust Tools
-    ["<leader>R"] = { name = " Rust Tools" },
+    ["<leader>R"] = { name = "󱘗 Rust Tools" },
     ["<leader>Rx"] = { "<cmd>RustExpandMacro<cr>", desc = " Expand Macros Recursively" },
     ["<leader>Rj"] = { "<cmd>RustExpandMacro<cr>", desc = " Join Lines" },
     ["<leader>Rc"] = { "<cmd>RustOpenCargo<cr>", desc = " Open Cargo.toml" },
@@ -17,16 +17,18 @@ return {
     ["<leader>Rd"] = { "<cmd>RustDebuggables<cr>", desc = " Debuggables" },
 
     -- Flutter Tools
-    ["<leader>F"] = { name = " Flutter Tools" },
+    ["<leader>F"] = { name = " Flutter Tools" },
     ["<leader>Fc"] = {
       function() require("telescope").extensions.flutter.commands() end,
       desc = "Flutter Commands",
     },
 
-    -- Gh integration by octo.nvim
-    ["<leader>O"] = { name = "  Octo" },
+    -- Gh integration by octo.nvim and tasks integration by overseer.nvim
+    ["<leader>O"] = { name = " Octo /  Overseer" },
     ["<leader>Oo"] = { "<cmd>Octo<cr>", desc = " Pick" },
     ["<leader>Oa"] = { "<cmd>Octo actions<cr>", desc = " Actions" },
+    ["<leader>Or"] = { "<cmd>OverseerRun<CR>", desc = " Run Task" },
+    ["<leader>Ot"] = { "<cmd>OverseerToggle<CR>", desc = " Toggle tasks" },
 
     -- Buffers
     L = {
