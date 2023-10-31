@@ -33,6 +33,7 @@ return {
         "html",
         "htmldjango",
         "http",
+        "hurl",
         "java",
         "javascript",
         "json",
