@@ -8,6 +8,7 @@ return function()
     extension = {
       yml = utils.yaml_ft,
       yaml = utils.yaml_ft,
+      hurl = "hurl",
     },
     pattern = {
       -- Chezmoi dotfiles
