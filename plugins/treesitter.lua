@@ -50,6 +50,7 @@ return {
         "prisma",
         "proto",
         "python",
+        "query",
         "regex",
         "requirements",
         "ruby",
