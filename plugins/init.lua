@@ -26,7 +26,7 @@ return {
   },
   {
     "kkoomen/vim-doge",
-    lazy = false,
+    cmd = "DogeGenerate",
     build = ":call doge#install()",
     init = function() vim.g.doge_enable_mappings = 0 end,
   },
