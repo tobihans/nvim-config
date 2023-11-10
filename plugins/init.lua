@@ -4,9 +4,10 @@ return {
   { "mattn/emmet-vim", lazy = false },
   { "kaarmu/typst.vim", ft = "typst" },
   { "wakatime/vim-wakatime", lazy = false },
-  { "kylechui/nvim-surround", lazy = false },
   { "folke/zen-mode.nvim", cmd = "ZenMode" },
   { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
+  { "kevinhwang91/nvim-bqf", event = "VeryLazy", ft = "qf" },
+  { "kylechui/nvim-surround", event = "VeryLazy", lazy = false, opts = {} },
   { "akinsho/git-conflict.nvim", version = "*", config = true, event = "User AstroGitFile" },
   {
     "ThePrimeagen/refactoring.nvim",
