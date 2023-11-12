@@ -1,5 +1,23 @@
 return {
   {
+    "olexsmir/gopher.nvim",
+    opts = {
+      commands = {
+        go = "go",
+        gomodifytags = "gomodifytags",
+        gotests = "gotests",
+        impl = "impl",
+        iferr = "iferr",
+      },
+      goimport = "gopls",
+      gofmt = "gopls",
+    },
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
+  {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = {

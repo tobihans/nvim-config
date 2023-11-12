@@ -5,6 +5,7 @@ return {
   { "kaarmu/typst.vim", ft = "typst" },
   { "wakatime/vim-wakatime", lazy = false },
   { "folke/zen-mode.nvim", cmd = "ZenMode" },
+  { "mbbill/undotree", cmd = "UndotreeToggle" },
   { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   { "kevinhwang91/nvim-bqf", event = "VeryLazy", ft = "qf" },
   { "kylechui/nvim-surround", event = "VeryLazy", lazy = false, opts = {} },
