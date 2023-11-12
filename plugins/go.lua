@@ -1,6 +1,19 @@
 return {
   {
     "olexsmir/gopher.nvim",
+    cmd = {
+      "GoTagAdd",
+      "GoTagRm",
+      "GoMod",
+      "GoGet",
+      "GoImpl",
+      "GoTestAdd",
+      "GoTestsAll",
+      "GoTestsExp",
+      "GoGenerate",
+      "GoCmt",
+      "GoIfErr",
+    },
     opts = {
       commands = {
         go = "go",
