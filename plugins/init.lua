@@ -5,7 +5,6 @@ return {
   { "kaarmu/typst.vim", ft = "typst" },
   { "wakatime/vim-wakatime", lazy = false },
   { "folke/zen-mode.nvim", cmd = "ZenMode" },
-  { "mbbill/undotree", cmd = "UndotreeToggle" },
   { "tiagovla/scope.nvim", lazy = false, priority = 1500 },
   { "kevinhwang91/nvim-bqf", event = "VeryLazy", ft = "qf" },
   { "kylechui/nvim-surround", event = "VeryLazy", lazy = false, opts = {} },
@@ -25,6 +24,14 @@ return {
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
     config = true,
+  },
+  {
+    "mbbill/undotree",
+    cmd = "UndotreeToggle",
+    init = function()
+      vim.g.undotree_WindowLayout = 3
+      vim.g.undotree_SetFocusWhenToggle = 1
+    end,
   },
   {
     "kkoomen/vim-doge",
