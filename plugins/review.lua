@@ -6,5 +6,6 @@ return {
     dependencies = { "nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim" },
     opts = {},
     config = true,
+    enabled = false,
   },
 }
