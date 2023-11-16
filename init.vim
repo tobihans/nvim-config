@@ -114,6 +114,8 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 
 function! OpenSettings()
-    execute "edit ~/.config/nvim/lua/user/init.lua"
-    execute "cd ~/.config/nvim/lua/user/"
+    if has("unix")
+        execute "edit ~/.config/nvim/lua/user/init.lua"
+        execute "cd ~/.config/nvim/lua/user/"
+    endif
 endfunction
