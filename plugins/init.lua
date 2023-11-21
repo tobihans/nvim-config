@@ -34,19 +34,17 @@ return {
     end,
   },
   {
-    "kkoomen/vim-doge",
-    cmd = "DogeGenerate",
-    build = ":call doge#install()",
-    init = function() vim.g.doge_enable_mappings = 0 end,
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    opts = { snippet_engine = "luasnip" },
+    config = true,
   },
   {
     "mg979/vim-visual-multi",
     lazy = false,
     init = function()
       vim.g.VM_default_mappings = 1
-
-      -- Default
-      -- vim.g.VM_leader = { ["default"] = "\\", ["visual"] = "\\", ["buffer"] = "z" }
+      vim.g.VM_mouse_mappings = 0
 
       vim.g.VM_maps = {
         ["Find Under"] = "<C-n>",
