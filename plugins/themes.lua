@@ -1,10 +1,88 @@
 return {
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    opts = { dark_variant = "moon", bold_vert_split = false },
-  },
   { "rebelot/kanagawa.nvim", enabled = true },
+  -- {
+  --   "fenetikm/falcon",
+  --   lazy = false,
+  -- },
+  -- {
+  --   "rockerBOO/boo-colorscheme-nvim",
+  --   config = function()
+  --     require("boo-colorscheme").use {
+  --       italic = true, -- toggle italics
+  --       theme = "boo",
+  --     }
+  --   end,
+  -- },
+  -- {
+  --   "olivercederborg/poimandres.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  --   config = true,
+  -- },
+  -- {
+  --   "mhartington/oceanic-next",
+  --   init = function()
+  --     vim.g.oceanic_next_terminal_bold = 1
+  --     vim.g.oceanic_next_terminal_italic = 1
+  --   end,
+  -- },
+  -- {
+  --   "shaunsingh/moonlight.nvim",
+  --   init = function()
+  --     vim.g.moonlight_italic_comments = true
+  --     vim.g.moonlight_italic_keywords = true
+  --     vim.g.moonlight_italic_functions = true
+  --     vim.g.moonlight_italic_variables = false
+  --     vim.g.moonlight_contrast = true
+  --     vim.g.moonlight_borders = false
+  --     vim.g.moonlight_disable_background = false
+  --   end,
+  --   config = function() require("moonlight").set() end,
+  -- },
+  -- {
+  --   "nyngwang/nvimgelion",
+  --   opts = {},
+  -- },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   opts = { dark_variant = "moon", bold_vert_split = false },
+  -- },
+  -- {
+  --   "AlexvZyl/nordic.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --
+  --   bold_keywords = true,
+  --   italic_comments = true,
+  --   transparent_bg = false,
+  --   bright_border = true,
+  --   reduced_blue = true,
+  --   cursorline = {
+  --       bold = false,
+  --       bold_number = true,
+  --       theme = 'dark',
+  --       blend = 0.7,
+  --   },
+  --   noice = {
+  --       style = 'flat',
+  --   },
+  --   telescope = {
+  --       style = 'flat',
+  --   },
+  --   leap = {
+  --       -- Dims the backdrop when using leap.
+  --       dim_backdrop = false,
+  --   },
+  --   ts_context = {
+  --       -- Enables dark background for treesitter-context window
+  --       dark_background = true,
+  --   }
+  --   },
+  --   config = true,
+  -- },
   -- { "nyoom-engineering/oxocarbon.nvim" },
   -- { "savq/melange-nvim", lazy = false, priority = 1000 },
   -- {
