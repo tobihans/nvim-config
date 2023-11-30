@@ -25,7 +25,8 @@ return {
         group = vim.api.nvim_create_augroup("CmpSourceCargo", { clear = true }),
         pattern = "Cargo.toml",
         callback = function()
-          require("cmp").setup.buffer { sources = { { name = "crates" } } }
+          ---@diagnostic disable-next-line: missing-fields
+          require("cmp").setup.buffer { sources = { { name = "crates", priority = 2000 } } }
           require "crates"
         end,
       })

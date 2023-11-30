@@ -1,23 +1,11 @@
 return {
-  { "rebelot/kanagawa.nvim", enabled = true },
+  { "rebelot/kanagawa.nvim", lazy = false, enabled = true, priority = 1000 },
+  -- { "morhetz/gruvbox", lazy = false, priority = 1000 },
+  -- { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   -- {
-  --   "fenetikm/falcon",
-  --   lazy = false,
-  -- },
-  -- {
-  --   "rockerBOO/boo-colorscheme-nvim",
-  --   config = function()
-  --     require("boo-colorscheme").use {
-  --       italic = true, -- toggle italics
-  --       theme = "boo",
-  --     }
-  --   end,
-  -- },
-  -- {
-  --   "olivercederborg/poimandres.nvim",
+  --   "ribru17/bamboo.nvim",
   --   lazy = false,
   --   priority = 1000,
-  --   opts = {},
   --   config = true,
   -- },
   -- {
@@ -39,10 +27,6 @@ return {
   --     vim.g.moonlight_disable_background = false
   --   end,
   --   config = function() require("moonlight").set() end,
-  -- },
-  -- {
-  --   "nyngwang/nvimgelion",
-  --   opts = {},
   -- },
   -- {
   --   "rose-pine/neovim",
@@ -93,13 +77,12 @@ return {
   --     sidebars = {},
   --   },
   -- },
-  -- { "projekt0n/github-nvim-theme", enabled = false },
   -- { "rafamadriz/neon", enabled = false },
   -- { "savq/melange-nvim", enabled = false },
   -- { "ray-x/aurora", enabled = false },
-  -- { "frenzyexists/aquarium-vim", enabled = false },
   -- { "EdenEast/nightfox.nvim", enabled = true, build = ":NightfoxCompile" },
   -- { "sainnhe/everforest", enabled = false },
+  -- { "sainnhe/gruvbox-material", enabled = false },
   -- { "navarasu/onedark.nvim", enabled = false },
   -- { "KeitaNakamura/neodark.vim", enabled = false },
   -- { "arcticicestudio/nord-vim", enabled = false },

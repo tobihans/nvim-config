@@ -9,17 +9,6 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
 
-function leave_snippet()
-  local luasnip = require "luasnip"
-
-  if
-      ((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
-      and luasnip.session.current_nodes[vim.api.nvim_get_current_buf()]
-      and not luasnip.session.jump_active
-  then
-    luasnip.unlink_current()
-  end
-end
 
 return {
   {
@@ -27,7 +16,7 @@ return {
     disabled = not vim.g.copilot_enabled,
     cmd = "Copilot",
     event = "User AstroFile",
-    opts = { panel = { enabled = false }, suggestion = { auto_trigger = true, debounce = 100 } },
+    opts = { panel = { enabled = false }, suggestion = { auto_trigger = true, debounce = 150 } },
   },
   {
     "hrsh7th/nvim-cmp",
@@ -72,10 +61,6 @@ return {
           if copilot.is_visible() then copilot.prev() end
         end)
       end
-
-      -- An attempt to prevent luasnip from jumping while I actually want a real <Tab>
-      -- See https://github.com/L3MON4D3/LuaSnip/issues/258#issuecomment-1011938524
-      -- vim.api.nvim_command [[ autocmd ModeChanged * lua leave_snippet() ]]
 
       return opts
     end,

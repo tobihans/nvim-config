@@ -8,26 +8,13 @@ return {
     },
     { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   },
-  keys = {
-    {
-      "<leader>fg",
-      function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end,
-      desc = "Find word under cursor",
-    },
-    {
-      "<leader>fv",
-      function() require("telescope-live-grep-args.shortcuts").grep_visual_selection() end,
-      mode = "v",
-      desc = "Find visual selection",
-    },
-  },
   config = function(plugin, opts)
     local telescope = require "telescope"
     local lga_actions = require "telescope-live-grep-args.actions"
 
     opts.defaults["history"] = {
       path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
-      limit = 100,
+      limit = 250,
     }
 
     opts["extensions"] = {
@@ -41,6 +28,7 @@ return {
           },
         },
       },
+      table.unpack(opts["extensions"] or {}),
     }
 
     require "plugins.configs.telescope"(plugin, opts)
