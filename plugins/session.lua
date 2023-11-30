@@ -4,13 +4,14 @@ return {
     enabled = true,
     opts = function(_, opts)
       opts.extensions = {
+        astronvim = {},
         quickfix = {},
         scope = {},
         aerial = {},
-        -- overseer = {
-        --   unique = true,
-        -- },
-        table.unpack(opts.extensions or {}), -- should come last
+        overseer = {
+          unique = true,
+          recent_first = true,
+        },
       }
     end,
   },
