@@ -33,6 +33,10 @@ return {
           opts = { skip = true },
         },
         {
+          filter = { find = "No code actions available" },
+          opts = { skip = true },
+        },
+        {
           filter = {
             event = "msg_show",
             kind = "",
