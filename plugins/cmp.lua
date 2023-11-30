@@ -1,5 +1,3 @@
-table.unpack = table.unpack or unpack -- 5.1 compatibility, see https://github.com/hrsh7th/nvim-cmp/issues/1017
-
 local has_words_before = function()
   local cursor_pos = vim.api.nvim_win_get_cursor(0)
 
@@ -8,7 +6,6 @@ local has_words_before = function()
   local line, col = table.unpack(cursor_pos)
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
 end
-
 
 return {
   {
@@ -20,7 +17,7 @@ return {
   },
   {
     "hrsh7th/nvim-cmp",
-    dependencies = { "zbirenbaum/copilot.lua" },
+    dependencies = { "zbirenbaum/copilot.lua", "hrsh7th/cmp-cmdline" },
     opts = function(_, opts)
       local cmp = require "cmp"
       local luasnip = require "luasnip"
@@ -63,6 +60,18 @@ return {
       end
 
       return opts
+    end,
+    config = function(_, opts)
+      local cmp = require "cmp"
+      cmp.setup(opts)
+
+      ---@diagnostic disable-next-line: missing-fields
+      cmp.setup.cmdline("/", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = "buffer" },
+        },
+      })
     end,
   },
 }
