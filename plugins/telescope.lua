@@ -28,7 +28,6 @@ return {
           },
         },
       },
-      table.unpack(opts["extensions"] or {}),
     }
 
     require "plugins.configs.telescope"(plugin, opts)
