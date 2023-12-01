@@ -34,7 +34,7 @@ return {
     ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
 
     -- Overrides
-    ["<leader>c"] = {
+    ["<leader>bC"] = {
       function()
         local bufs = vim.fn.getbufinfo { buflisted = true }
         require("astronvim.utils.buffer").close(0)
