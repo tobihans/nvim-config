@@ -22,6 +22,7 @@ local config = {
     setup_handlers = {
       rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
       clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
+      -- denols = function(_, opts) require("deno-nvim").setup { server = opts } end,
     },
     on_attach = function(client, _)
       -- Disables clangd for protobuf files
@@ -47,8 +48,8 @@ local config = {
             lint = {
               unknownAtRules = "ignore",
             },
-          }
-        }
+          },
+        },
       },
       clangd = {
         capabilities = {
@@ -57,6 +58,10 @@ local config = {
       },
       tsserver = function(opts)
         opts.root_dir = require("lspconfig.util").root_pattern "package.json"
+        return opts
+      end,
+      denols = function(opts)
+        opts.root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc")
         return opts
       end,
       eslint = function(opts)

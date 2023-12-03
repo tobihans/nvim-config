@@ -9,6 +9,7 @@ return {
         "clangd",
         "clangd",
         "cssls",
+        "denols",
         "eslint",
         "gopls",
         "intelephense",
@@ -57,6 +58,11 @@ return {
                 or utils.root_has_file ".prettierrc.json"
                 or utils.root_has_file ".prettierrc.js"
             end,
+          })
+        end,
+        deno_fmt = function()
+          require("null-ls").register(require("null-ls").builtins.formatting.deno_fmt.with {
+            condition = function(utils) return utils.root_has_file "deno.json" or utils.root_has_file "deno.jsonc" end,
           })
         end,
       },
