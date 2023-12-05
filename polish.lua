@@ -12,10 +12,12 @@ return function()
     },
     pattern = {
       -- Chezmoi dotfiles
-      ['dot_bash.*'] = 'bash',
-      ['dot.*.sh'] = 'bash',
-      ['dot_functions.*'] = 'bash',
-    }
+      ["dot_bash.*"] = "bash",
+      ["dot.*.sh"] = "bash",
+      ["dot_functions.*"] = "bash",
+      ["env.*"] = "bash",
+      [".env.*"] = "bash",
+    },
   }
 
   -- https://www.reddit.com/r/neovim/comments/12gvms4/this_is_why_your_higlights_look_different_in_90/

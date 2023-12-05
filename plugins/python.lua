@@ -1,1 +1,1 @@
-return { import = "astrocommunity.pack.python" }
+return { import = "astrocommunity.pack.python-ruff" }
