@@ -117,5 +117,8 @@ function! OpenSettings()
     if has("unix")
         execute "edit ~/.config/nvim/lua/user/init.lua"
         execute "cd ~/.config/nvim/lua/user/"
+        elseif has("win32")
+        execute "edit ~\\AppData\\Local\\nvim\\lua\\user\\init.lua"
+        execute "cd ~\\AppData\\Local\\nvim\\lua\\user"
     endif
 endfunction
