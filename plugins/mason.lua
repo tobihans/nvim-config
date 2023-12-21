@@ -12,6 +12,7 @@ return {
         "denols",
         "eslint",
         "gopls",
+        "html",
         "intelephense",
         "jdtls",
         "jsonls",
