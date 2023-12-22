@@ -1,7 +1,7 @@
 local M = {}
 
 -- Distinguish between yaml and ansible yaml
-function M.yaml_ft(path, bufnr)
+local function yaml_ft(path, bufnr)
   -- get content of buffer as string
   local content = vim.filetype.getlines(bufnr)
   if type(content) == "table" then content = table.concat(content, "\n") end
@@ -10,7 +10,7 @@ function M.yaml_ft(path, bufnr)
   local path_regex = vim.regex "(tasks\\|roles\\|handlers)/"
   if path_regex and path_regex:match_str(path) then return "yaml.ansible" end
   -- check for known ansible playbook text and if found, return yaml.ansible
-  local regex = vim.regex "^(hosts:\\|tasks:)$"
+  local regex = vim.regex "hosts:\\|tasks:"
   if regex and regex:match_str(content) then return "yaml.ansible" end
 
   -- return yaml if nothing else

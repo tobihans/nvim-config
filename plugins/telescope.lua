@@ -4,29 +4,16 @@ return {
     {
       "nvim-telescope/telescope-smart-history.nvim",
       dependencies = { "kkharji/sqlite.lua" },
-      build = function(_)
-        if vim.fn.has "unix" then
-          vim.cmd "!mkdir -p ~/.local/share/nvim/databases"
-        elseif vim.fn.has "win32" then
-          vim.cmd "!New-Item -ItemType Directory -Force -Path '~/AppData/Local/nvim-data/databases' -ErrorAction SilentlyContinue"
-        end
-      end,
+      build = "!mkdir -p ~/.local/share/nvim/databases",
     },
     { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   },
   config = function(plugin, opts)
     local telescope = require "telescope"
     local lga_actions = require "telescope-live-grep-args.actions"
-    local path = ""
-
-    if vim.fn.has("win32") then
-      path = "~/AppData/Local/nvim-data/databases/telescope_history.sqlite3"
-    else
-      path = "~/.local/share/nvim/databases/telescope_history.sqlite3"
-    end
 
     opts.defaults["history"] = {
-      path = path,
+      path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
       limit = 250,
     }
 

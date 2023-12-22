@@ -1,5 +1,17 @@
 return {
   { "rebelot/kanagawa.nvim", lazy = false, enabled = true, priority = 1000 },
+  {
+    "sainnhe/everforest",
+    lazy = false,
+    enabled = true,
+    priority = 1500,
+    init = function()
+      vim.g.everforest_better_performance = 1
+      vim.g.everforest_background = "medium"
+      vim.g.everforest_enable_italic = 1
+      vim.g.everforest_dim_inactive_windows = 0
+    end,
+  },
   -- { "morhetz/gruvbox", lazy = false, priority = 1000 },
   -- { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
   -- {
@@ -81,7 +93,6 @@ return {
   -- { "savq/melange-nvim", enabled = false },
   -- { "ray-x/aurora", enabled = false },
   -- { "EdenEast/nightfox.nvim", enabled = true, build = ":NightfoxCompile" },
-  -- { "sainnhe/everforest", enabled = false },
   -- { "sainnhe/gruvbox-material", enabled = false },
   -- { "navarasu/onedark.nvim", enabled = false },
   -- { "KeitaNakamura/neodark.vim", enabled = false },

@@ -10,6 +10,8 @@ return {
         "clangd",
         "cssls",
         "denols",
+        "docker_compose_language_service",
+        "dockerls",
         "eslint",
         "gopls",
         "html",
