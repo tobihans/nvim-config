@@ -1,6 +1,5 @@
 return {
   { "AstroNvim/astrocommunity" },
-  { "p00f/clangd_extensions.nvim" },
   { "mattn/emmet-vim", lazy = false },
   { "kaarmu/typst.vim", ft = "typst" },
   { "wakatime/vim-wakatime", lazy = false },

@@ -24,13 +24,6 @@ local config = {
       clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
       -- denols = function(_, opts) require("deno-nvim").setup { server = opts } end,
     },
-    on_attach = function(client, _)
-      -- Disables clangd for protobuf files
-      if client.name == "clangd" and vim.bo.filetype == "proto" then
-        client.stop()
-        return
-      end
-    end,
     formatting = {
       format_on_save = {
         enabled = true,
