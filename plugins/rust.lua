@@ -7,7 +7,9 @@ return {
       vim.g.rustaceanvim = {
         tools = {},
         server = {
-          on_attach = function(_, bufnr)
+          on_attach = function(client, bufnr)
+            require("astronvim.utils.lsp").on_attach(client, bufnr)
+
             require("which-key").register({
               ["<leader>R"] = {
                 name = "󱘗 Rust Tools",
@@ -22,7 +24,6 @@ return {
                 p = { function() vim.cmd.RustLsp "parentModule" end, " Go to parent module" },
                 t = { function() vim.cmd.RustLsp "syntaxTree" end, " View syntax tree" },
               },
-              ["<leader>lf"] = { function() vim.lsp.buf.format { async = true } end, "Format Code"}
             }, { buffer = bufnr })
           end,
           settings = {

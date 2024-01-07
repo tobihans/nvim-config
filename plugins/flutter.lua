@@ -11,7 +11,9 @@ return {
         showTodos = false,
       },
       lsp = {
-        on_attach = function(_, bufnr)
+        on_attach = function(client, bufnr)
+          require("astronvim.utils.lsp").on_attach(client, bufnr)
+
           require("which-key").register({
             ["<leader>F"] = {
               name = " Flutter Tools",
