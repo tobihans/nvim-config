@@ -22,6 +22,7 @@ return {
                 p = { function() vim.cmd.RustLsp "parentModule" end, " Go to parent module" },
                 t = { function() vim.cmd.RustLsp "syntaxTree" end, " View syntax tree" },
               },
+              ["<leader>lf"] = { function() vim.lsp.buf.format { async = true } end, "Format Code"}
             }, { buffer = bufnr })
           end,
           settings = {
