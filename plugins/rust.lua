@@ -1,20 +1,34 @@
 return {
   {
-    "simrat39/rust-tools.nvim",
+    "mrcjkb/rustaceanvim",
+    version = "^3", -- Recommended
     ft = { "rust" },
-    opts = function()
-      local package_path = require("mason-registry").get_package("codelldb"):get_install_path()
-      local codelldb_path = package_path .. "/codelldb"
-      local liblldb_path = package_path .. "/extension/lldb/lib/liblldb"
-
-      return {
-        server = require("astronvim.utils.lsp").config "rust_analyzer",
-        dap = {
-          adapter = require("rust-tools.dap").get_codelldb_adapter(
-            codelldb_path,
-            liblldb_path .. (vim.loop.os_uname().sysname == "Linux" and ".so" or ".dylib")
-          ),
+    init = function()
+      vim.g.rustaceanvim = {
+        tools = {},
+        server = {
+          on_attach = function(_, bufnr)
+            require("which-key").register({
+              ["<leader>R"] = {
+                name = "󱘗 Rust Tools",
+                x = { function() vim.cmd.RustLsp "expandMacro" end, " Expand Macros Recursively" },
+                m = { function() vim.cmd.RustLsp "rebuildProcMacros" end, " Rebuild proc macros" },
+                j = { function() vim.cmd.RustLsp "joinLines" end, " Join Lines" },
+                c = { function() vim.cmd.RustLsp "openCargo" end, " Open Cargo.toml" },
+                g = { function() vim.cmd.RustLsp "crateGraph" end, " View Crate Graph" },
+                r = { function() vim.cmd.RustLsp { "runnables", "last" } end, " Runnables" },
+                d = { function() vim.cmd.RustLsp { "debuggables", "last" } end, " Debuggables" },
+                l = { function() vim.cmd.RustLsp "explainError" end, " Explain Error" },
+                p = { function() vim.cmd.RustLsp "parentModule" end, " Go to parent module" },
+                t = { function() vim.cmd.RustLsp "syntaxTree" end, " View syntax tree" },
+              },
+            }, { buffer = bufnr })
+          end,
+          settings = {
+            ["rust-analyzer"] = {},
+          },
         },
+        dap = {},
       }
     end,
   },

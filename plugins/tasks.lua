@@ -28,5 +28,13 @@ return {
         direction = "right",
       },
     },
+    init = function()
+      require("which-key").register {
+        ["<leader>O"] = {
+          r = { "<cmd>OverseerRun<CR>", desc = " Run Task" },
+          t = { "<cmd>OverseerToggle<CR>", desc = " Toggle tasks" },
+        },
+      }
+    end,
   },
 }

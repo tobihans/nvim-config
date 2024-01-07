@@ -8,6 +8,31 @@ return {
     },
     { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   },
+  init = function()
+    local wk = require "which-key"
+    wk.register {
+      ["<leader>f"] = {
+        g = {
+          function() require("telescope-live-grep-args.shortcuts").grep_word_under_cursor() end,
+          "Find word under cursor",
+        },
+        w = {
+          function() require("telescope").extensions.live_grep_args.live_grep_args() end,
+          "Find words",
+        },
+      },
+    }
+
+    wk.register({
+      ["<leader>f"] = {
+        name = " Find",
+        v = {
+          function() require("telescope-live-grep-args.shortcuts").grep_visual_selection() end,
+          "Find visual selection",
+        },
+      },
+    }, { mode = "v" })
+  end,
   config = function(plugin, opts)
     local telescope = require "telescope"
     local lga_actions = require "telescope-live-grep-args.actions"

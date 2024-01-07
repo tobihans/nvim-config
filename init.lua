@@ -19,10 +19,11 @@ local config = {
     },
   },
   lsp = {
+    skip_setup = {
+      "rust_analyzer",
+    },
     setup_handlers = {
-      rust_analyzer = function(_, opts) require("rust-tools").setup { server = opts } end,
       clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
-      -- denols = function(_, opts) require("deno-nvim").setup { server = opts } end,
     },
     formatting = {
       format_on_save = {
