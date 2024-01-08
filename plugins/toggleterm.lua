@@ -20,8 +20,6 @@ return {
             function() require("astronvim.utils").toggle_term_cmd "btop" end,
             "ToggleTerm btop",
           },
-          r = { "<cmd>OverseerRun<CR>", desc = " Run Task" },
-          t = { "<cmd>OverseerToggle<CR>", desc = " Toggle tasks" },
         },
       }
     end,

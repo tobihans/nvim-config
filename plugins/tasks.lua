@@ -2,19 +2,19 @@ return {
   {
     "stevearc/overseer.nvim",
     cmd = {
-      "OverseerOpen",
-      "OverseerClose",
-      "OverseerToggle",
-      "OverseerSaveBundle",
-      "OverseerLoadBundle",
-      "OverseerDeleteBundle",
-      "OverseerRunCmd",
-      "OverseerRun",
-      "OverseerInfo",
       "OverseerBuild",
-      "OverseerQuickAction",
-      "OverseerTaskAction",
       "OverseerClearCache",
+      "OverseerClose",
+      "OverseerDeleteBundle",
+      "OverseerInfo",
+      "OverseerLoadBundle",
+      "OverseerOpen",
+      "OverseerQuickAction",
+      "OverseerRun",
+      "OverseerRunCmd",
+      "OverseerSaveBundle",
+      "OverseerTaskAction",
+      "OverseerToggle",
     },
     opts = {
       strategy = {
@@ -30,10 +30,8 @@ return {
     },
     init = function()
       require("which-key").register {
-        ["<leader>O"] = {
-          r = { "<cmd>OverseerRun<CR>", desc = " Run Task" },
-          t = { "<cmd>OverseerToggle<CR>", desc = " Toggle tasks" },
-        },
+        ["<leader>Or"] = { "<cmd>OverseerRun<CR>", " Run Task" },
+        ["<leader>Ot"] = { "<cmd>OverseerToggle<CR>", " Toggle tasks" },
       }
     end,
   },
