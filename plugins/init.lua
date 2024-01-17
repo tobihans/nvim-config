@@ -16,7 +16,11 @@ return {
   {
     "folke/drop.nvim",
     event = "VimEnter",
-    opts = { max = 25, screensaver = false },
+    opts = function(opts, _)
+      local themes = { "spring", "summer", "leaves" }
+      opts = { theme = themes[math.random(#themes)], max = 45, screensaver = 1000 * 60 * 5 }
+      return opts
+    end,
   },
   {
     "folke/todo-comments.nvim",

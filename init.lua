@@ -9,10 +9,10 @@ local config = {
     skip_prompts = false, -- skip prompts about breaking changes
     show_changelog = true, -- show the changelog after performing an update
   },
-  colorscheme = "everforest",
+  colorscheme = "nord",
   heirline = {
     separators = {
-      tab = { "", "" },
+      -- tab = { "", "" },
     },
     attributes = {
       mode = { bold = true },
