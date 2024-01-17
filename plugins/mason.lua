@@ -1,5 +1,16 @@
 return {
   {
+    "williamboman/mason.nvim",
+    priority = 200,
+    opts = {
+      ui = {
+        border = "double",
+        width = 0.8,
+        height = 0.8,
+      },
+    },
+  },
+  {
     "williamboman/mason-lspconfig.nvim",
     priority = 100,
     opts = {
@@ -13,6 +24,7 @@ return {
         "dockerls",
         "eslint",
         "gopls",
+        "graphql",
         "html",
         "intelephense",
         "jdtls",
@@ -27,6 +39,7 @@ return {
         "taplo",
         "tsserver",
         "typst_lsp",
+        "unocss",
         "vimls",
         "volar",
         "yamlls",

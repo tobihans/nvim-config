@@ -11,9 +11,7 @@ local config = {
   },
   colorscheme = "nord",
   heirline = {
-    separators = {
-      -- tab = { "", "" },
-    },
+    separators = {},
     attributes = {
       mode = { bold = true },
     },
