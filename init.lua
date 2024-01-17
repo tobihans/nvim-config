@@ -22,9 +22,6 @@ local config = {
     skip_setup = {
       "rust_analyzer",
     },
-    setup_handlers = {
-      clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
-    },
     formatting = {
       format_on_save = {
         enabled = true,
