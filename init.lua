@@ -11,7 +11,11 @@ local config = {
   },
   colorscheme = "nord",
   heirline = {
-    separators = {},
+    separators = {
+      -- https://github.com/ryanoasis/powerline-extra-symbols
+      -- tab = { "\u{e0ba}", "\u{e0bc}" },
+      tab = { "\u{e0b2}", "\u{e0b0}" },
+    },
     attributes = {
       mode = { bold = true },
     },
