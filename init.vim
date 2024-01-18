@@ -72,6 +72,8 @@ endif
 " Edit my config
 nnoremap <M-s> :call OpenSettings()<cr>
 function! OpenSettings()
+    " TODO: Open a new tab if there is already a file open
+    " or open a new tab instead
     if has("unix")
         execute "edit ~/.config/nvim/lua/user/init.lua"
         execute "cd ~/.config/nvim/lua/user/"
