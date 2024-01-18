@@ -56,7 +56,7 @@ return {
     loaded_node_provider = false,
     loaded_perl_provider = false,
     mapleader = ",",
-    maplocalleader = "/",
+    maplocalleader = ";",
     resession_enabled = true, -- used to scope sessions to tabs
   },
 }
