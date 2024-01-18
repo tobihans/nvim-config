@@ -1,5 +1,6 @@
 return {
   { "AstroNvim/astrocommunity" },
+  {"theHamsta/nvim-dap-virtual-text"},
   { "mattn/emmet-vim", lazy = false },
   { "kaarmu/typst.vim", ft = "typst" },
   { "wakatime/vim-wakatime", lazy = false },
@@ -12,15 +13,6 @@ return {
     "ThePrimeagen/refactoring.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
     cmd = "Refactor",
-  },
-  {
-    "folke/drop.nvim",
-    event = "VimEnter",
-    opts = function(opts, _)
-      local themes = { "spring", "summer", "leaves" }
-      opts = { theme = themes[math.random(#themes)], max = 45, screensaver = 1000 * 60 * 5 }
-      return opts
-    end,
   },
   {
     "folke/todo-comments.nvim",
@@ -42,6 +34,20 @@ return {
     cmd = "Neogen",
     opts = { snippet_engine = "luasnip" },
     config = true,
+  },
+  {
+    "folke/drop.nvim",
+    event = "VimEnter",
+    opts = function(opts, _)
+      local themes = { "leaves", "snow", "stars", "spring", "summer" }
+      opts = {
+        max = 45,
+        screensaver = 1000 * 60 * 5,
+        theme = themes[math.random(#themes)],
+        filetypes = { "dashboard", "alpha", "starter" },
+      }
+      return opts
+    end,
   },
   {
     "mg979/vim-visual-multi",
