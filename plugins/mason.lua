@@ -33,6 +33,7 @@ return {
         "lua_ls",
         "marksman",
         "phpactor",
+        "prismals",
         "pyright",
         "ruff_lsp",
         "rust_analyzer",
