@@ -11,7 +11,7 @@ return {
             require("astronvim.utils.lsp").on_attach(client, bufnr)
 
             require("which-key").register({
-              ["<leader>R"] = {
+              ["<localleader>r"] = {
                 name = "󱘗 Rust Tools",
                 x = { function() vim.cmd.RustLsp "expandMacro" end, " Expand Macros Recursively" },
                 m = { function() vim.cmd.RustLsp "rebuildProcMacros" end, " Rebuild proc macros" },

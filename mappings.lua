@@ -2,10 +2,9 @@ return {
   n = {
     K = { function() vim.lsp.buf.hover() end, desc = "Hover symbol details" },
 
+    ["<leader><cr>"] = { name = "Remove search count highlight" },
+    ["<leader>m"] = { name = "Remove the Windows ^M" },
     ["<leader>O"] = { name = " Octo /  Overseer" },
-
-    ["<leader>x"] = { "<cmd>x<cr>", desc = " :x<cr>" },
-
     ["<leader>bC"] = {
       function()
         local bufs = vim.fn.getbufinfo { buflisted = true }
