@@ -41,7 +41,7 @@ return {
     opts = function(opts, _)
       local themes = { "leaves", "snow", "stars", "spring", "summer" }
       opts = {
-        max = 45,
+        max = 65,
         screensaver = 1000 * 60 * 5,
         theme = themes[math.random(#themes)],
         filetypes = { "dashboard", "alpha", "starter" },
