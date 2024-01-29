@@ -52,9 +52,5 @@ return function()
   utils.schedule_background_switch()
 
   -- VimScript
-  if vim.fn.has "unix" then
-    vim.cmd "source ~/.config/nvim/lua/user/init.vim"
-  elseif vim.fn.has "win32" then
-    vim.cmd "source ~\\AppData\\Local\\nvim\\lua\\user\\init.vim"
-  end
+  vim.cmd "source ~/.config/nvim3/lua/user/init.vim"
 end

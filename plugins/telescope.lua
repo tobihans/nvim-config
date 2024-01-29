@@ -4,7 +4,6 @@ return {
     {
       "nvim-telescope/telescope-smart-history.nvim",
       dependencies = { "kkharji/sqlite.lua" },
-      build = "!mkdir -p ~/.local/share/nvim/databases",
     },
     { "nvim-telescope/telescope-live-grep-args.nvim", version = "^1.0.0" },
   },
@@ -38,7 +37,7 @@ return {
     local lga_actions = require "telescope-live-grep-args.actions"
 
     opts.defaults["history"] = {
-      path = "~/.local/share/nvim/databases/telescope_history.sqlite3",
+      path = vim.fn.stdpath "cache" .. "/telescope_history.sqlite3",
       limit = 250,
     }
 
