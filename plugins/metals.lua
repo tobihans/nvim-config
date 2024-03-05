@@ -5,7 +5,7 @@ return {
       "nvim-lua/plenary.nvim",
       { "mfussenegger/nvim-dap" },
     },
-    build = ":MetalsInstall",
+    build = "MetalsInstall",
     ft = { "scala", "sbt" },
     init = function()
       require("dap").configurations.scala = {
